@@ -1,68 +1,292 @@
 <!DOCTYPE html>
-<html>
-    <head>
-    <meta charset="utf-8">
-    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport" />
-    <link rel="alternate icon" type="image/png" href="/babble/img/icon.png">
-    <title>ShinyAkira's Babble · 我总是生产很多文字</title>
-    
-<link rel="stylesheet" href="/babble/css/reset.css">
+<html lang="zh-cmn-Hans"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><style type="text/css">
+	/* cyrillic */
+@font-face {
+  font-family: 'Playfair Display';
+  font-style: italic;
+  font-weight: 300;
+  font-display: block;
+  src: url(https://fonts.gstatic.com/s/playfairdisplay/v30/nuFkD-vYSZviVYUb_rj3ij__anPXDTnohkk7yRZrPJ-M.woff2) format('woff2');
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Playfair Display';
+  font-style: italic;
+  font-weight: 300;
+  font-display: block;
+  src: url(https://fonts.gstatic.com/s/playfairdisplay/v30/nuFkD-vYSZviVYUb_rj3ij__anPXDTnojUk7yRZrPJ-M.woff2) format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Playfair Display';
+  font-style: italic;
+  font-weight: 300;
+  font-display: block;
+  src: url(https://fonts.gstatic.com/s/playfairdisplay/v30/nuFkD-vYSZviVYUb_rj3ij__anPXDTnojEk7yRZrPJ-M.woff2) format('woff2');
+  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Playfair Display';
+  font-style: italic;
+  font-weight: 300;
+  font-display: block;
+  src: url(https://fonts.gstatic.com/s/playfairdisplay/v30/nuFkD-vYSZviVYUb_rj3ij__anPXDTnogkk7yRZrPA.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* cyrillic */
+@font-face {
+  font-family: 'Playfair Display';
+  font-style: italic;
+  font-weight: 360;
+  font-display: block;
+  src: url(https://fonts.gstatic.com/s/playfairdisplay/v30/nuFkD-vYSZviVYUb_rj3ij__anPXDTnohkk7yRZrPJ-M.woff2) format('woff2');
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Playfair Display';
+  font-style: italic;
+  font-weight: 360;
+  font-display: block;
+  src: url(https://fonts.gstatic.com/s/playfairdisplay/v30/nuFkD-vYSZviVYUb_rj3ij__anPXDTnojUk7yRZrPJ-M.woff2) format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Playfair Display';
+  font-style: italic;
+  font-weight: 360;
+  font-display: block;
+  src: url(https://fonts.gstatic.com/s/playfairdisplay/v30/nuFkD-vYSZviVYUb_rj3ij__anPXDTnojEk7yRZrPJ-M.woff2) format('woff2');
+  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Playfair Display';
+  font-style: italic;
+  font-weight: 360;
+  font-display: block;
+  src: url(https://fonts.gstatic.com/s/playfairdisplay/v30/nuFkD-vYSZviVYUb_rj3ij__anPXDTnogkk7yRZrPA.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* cyrillic */
+@font-face {
+  font-family: 'Playfair Display';
+  font-style: normal;
+  font-weight: 300;
+  font-display: block;
+  src: url(https://fonts.gstatic.com/s/playfairdisplay/v30/nuFvD-vYSZviVYUb_rj3ij__anPXJzDwcbmjWBN2PKdFvXDTbtXK-F2qC0usEw.woff) format('woff');
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Playfair Display';
+  font-style: normal;
+  font-weight: 300;
+  font-display: block;
+  src: url(https://fonts.gstatic.com/s/playfairdisplay/v30/nuFvD-vYSZviVYUb_rj3ij__anPXJzDwcbmjWBN2PKdFvXDYbtXK-F2qC0usEw.woff) format('woff');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Playfair Display';
+  font-style: normal;
+  font-weight: 300;
+  font-display: block;
+  src: url(https://fonts.gstatic.com/s/playfairdisplay/v30/nuFvD-vYSZviVYUb_rj3ij__anPXJzDwcbmjWBN2PKdFvXDZbtXK-F2qC0usEw.woff) format('woff');
+  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Playfair Display';
+  font-style: normal;
+  font-weight: 300;
+  font-display: block;
+  src: url(https://fonts.gstatic.com/s/playfairdisplay/v30/nuFvD-vYSZviVYUb_rj3ij__anPXJzDwcbmjWBN2PKdFvXDXbtXK-F2qC0s.woff) format('woff');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
 
-    
-<link rel="stylesheet" href="/babble/css/style.css">
+@charset "utf-8";
+*{
+	margin: 0;
+	padding: 0;
+	border: 0;
+	vertical-align: baseline;
+	box-sizing: border-box;
+	-webkit-tap-highlight-color: transparent;
+}
+body{
+	--bg: rgba(189, 188, 188, 0.8);
+	--text: #000000;
+	--duration: .2s;
+	--curve: ease-out;
+	font-family: Playfair Display;
+	text-rendering: optimizeLegibility;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	display: flex;
+	justify-content: center; align-items: center;
+	width: 100vw; height: 100vh;
+	color: var(--text);
+	overflow: hidden;
+}
+a{
+	color: var(--text);
+	text-decoration: none;
+}
+::selection{
+	color: var(--bg);
+	background: var(--text);
+	text-shadow: none;
+}
+main{
+	font-size: calc(1vmin + 2.4vmax);
+	max-width: 50ch;
+	line-height: 1.65;
+	font-weight: 300;
+	padding: 1em 1.5em;
+	background: var(--bg);
+	backdrop-filter: blur(21px);
+	transition: all var(--duration) var(--curve);
+	color: var(--text);
+}
+.hovered main{
+	--text: #fff;
+	--bg: #000;
+}
+.link{
+	font-style: italic;
+	font-weight: 300;
+	position: relative;
+	display: inline-block;
+	z-index: 9;
+	transition: all var(--duration) var(--curve);
+	text-shadow: .03em 0 0 var(--bg), -.03em 0 0 var(--bg), .08em 0 0 var(--bg), -.08em 0 0 var(--bg);
 
-    
-<link rel="stylesheet" href="/babble/css/markdown.css">
+	text-shadow:
+		.08em 0 0 var(--bg),
+		-.08em 0 0 var(--bg),
+		.06em 0 0 var(--bg),
+		-.06em 0 0 var(--bg),
+		.07em 0 0 var(--bg),
+		-.07em 0 0 var(--bg),
+		.03em 0 0 var(--bg),
+		-.03em 0 0 var(--bg),
+		.04em 0 0 var(--bg),
+		-.04em 0 0 var(--bg);
+	/* text-decoration: underline; */
+	/* text-decoration-color: #69c; */
+}
+.link:hover{
+	/* color: #56BFD0; */
+}
+.hovered .link{
+	text-shadow: none;
+}
+.link::after{
+	content: "";
+	position: absolute;
+	bottom: .32em; left: 0;
+	width: 100%;
+	height: .06em;
+	border-radius: 1em;
+	background: var(--text);
+	z-index: -1;
+	transition: all var(--duration) var(--curve);
+}
+.link:hover::after{
+	background: #1066b7;
+}
+.u{
+	border-bottom: 1px solid #333;
+	line-height: 1;
+	display: inline-block;
+}
+.main-bg{
+	position: fixed;
+	left: 0; top: 0;
+	width: 100%; height: 100%;
+	z-index: -1;
+	opacity: 0;
+	transition: all .2s ease-out;
 
-    
-<link rel="stylesheet" href="/babble/css/fonts.css">
+	background-color: #ccc;
+	background-image: linear-gradient(45deg, black 25%, transparent 25%, transparent 75%, black 75%, black),
+	linear-gradient(-45deg, black 25%, transparent 25%, transparent 75%, black 75%, black);
+	background-size: 2px 2px;
 
-<meta name="generator" content="Hexo 6.3.0"></head>
-    <body>
-        <div class="paper">
-            <div class="paper-main">
-                
-                    <div class="post-header">
-    <a class="logo" href="/babble/">ShinyAkira&#39;s Babble</a>
-    <a class="go-home" href="/babble/">
-        <svg width="8" height="14" viewBox="0 0 8 14">
-            <path d="M7 1L1 7l6 6" stroke="#000" stroke-width="2" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round"/>
-        </svg>
-    </a>
-</div>
-                
-                <div class="post-main">
+}
+.hovered .main-bg{
+	opacity: 1;
+	transition: all .3s ease-out;
+}
+.main-bg video{
+	width: 100%; height: 100%;
+	object-fit: cover;
+	opacity: .8;
+}
+.dummy{
+	display: inline-block;
+}
 
-    
+</style>	
+		<!-- Google tag (gtag.js) -->
+		<script async="" src="./ShinyAkira&#39;s Personal Webpage_files/js"></script>
+		<script>
+			window.dataLayer = window.dataLayer || [];
+			function gtag(){dataLayer.push(arguments);}
+			gtag('js', new Date());
+			gtag('config', 'G-GRCFYWTE5B');
+		</script>
+		<link rel="icon" type="image/png" href="https://shinyakira106.github.io/icon.png">
+		
+		
+		<title>Whoops~ | ShinyAkira's Personal Webpage</title>
+		<meta name="robots" content="noodp">
+		<meta name="author" content="ShinyAkira">
+		<meta name="description" content="ShinyAkira&#39;s Personal Webpage">
 
-        <div class="post-md">
-            <h1 id="Whoops！"><a href="#Whoops！" class="headerlink" title="Whoops！"></a>Whoops！</h1><h2 id="孤灯月落空流叹，啥都木有怎么办？-点此返回绝绝赞，-更多精彩等你看！"><a href="#孤灯月落空流叹，啥都木有怎么办？-点此返回绝绝赞，-更多精彩等你看！" class="headerlink" title="孤灯月落空流叹，啥都木有怎么办？ 点此返回绝绝赞， 更多精彩等你看！"></a>孤灯月落空流叹，<br>啥都木有怎么办？<br> <a href="https://shinyakira106.github.io/babble/">点此返回</a>绝绝赞，<br> 更多精彩等你看！</h2><p><strong>Light the candles and watch the moon come down.</strong><br><strong>What should do if there is nothing can be done.</strong><br><strong><a href="https://shinyakira106.github.io/babble/">Click here</a> to return to the front.</strong><br><strong>More exciting waiting for you to find！</strong></p>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
 
-        </div>
+		<meta property="og:type" content="website">
+		<meta property="og:title" content="ShinyAkira">
+		<meta property="og:description" content="ShinyAkira&#39;s Personal Webpage">
+		<meta property="og:image" content="">
 
-    
+	<meta http-equiv="origin-trial" content="AymqwRC7u88Y4JPvfIF2F37QKylC04248hLCdJAsh8xgOfe/dVJPV3XS3wLFca1ZMVOtnBfVjaCMTVudWM//5g4AAAB7eyJvcmlnaW4iOiJodHRwczovL3d3dy5nb29nbGV0YWdtYW5hZ2VyLmNvbTo0NDMiLCJmZWF0dXJlIjoiUHJpdmFjeVNhbmRib3hBZHNBUElzIiwiZXhwaXJ5IjoxNjk1MTY3OTk5LCJpc1RoaXJkUGFydHkiOnRydWV9"></head>
+<body>
+	<div id="wrapper" class=""><main style="--text:#333; --bg:rgba(255, 255, 255, 0.7);">
+	<div style="font-size:xxx-large">
+	<i>
+		Two roads diverged in a yellow wood,<br>
+		And sorry I could not travel both,<br>
+		And be one traveler, long I stood,<br>
+		And looked down one as far as I could.<br>
+	</i>
+	</div>
 
-</div>
-                <div class="footer" style="font-size:small">
-    <span>© 2021 - 2023 ShinyAkira. All rights reserved.</span>
-    <span>Theme one-paper by <a target="_blank" href="https://zheli.design">zheli.design</a> and Proudly powered by <a target="_blank" href="https://hexo.io/">Hexo</a></span>
-</div>
+	<div style="font-size:xx-large">
+		<p style="text-align: right;"><strong>Robert Frost</strong> - <a target="_blank" href="https://www.poetryfoundation.org/poems/44272/the-road-not-taken" class="link">The Road Not Taken (1915)</a></p>
+		<br>
+	</div>
 
+	<i>	
+		i know you're already eager to move elsewhere.<br>
+	   	but unfortunately, here is <strong>not the place</strong> you are searching for.<br>
+	</i>
 
-<link rel="stylesheet" href="/babble/css/a11y-dark.min.css">
+	<div style="font-size:xxx-large">
+	<i>
+		<br>Two roads diverged in a wood, and —<br>
+	</i>
+		① Just take the first one, <a target="_blank" href="https://shinyakira106.github.io/" class="link">as just as fair</a>.<br>
+		② Or <a target="_blank" href="https://shinyakira106.github.io/babble/" class="link">keep the first for another day!</a><br>
+	</div>
 
-
-<script src="/babble/js/highlight.min.js"></script>
-
-
-<script src="/babble/js/highlightjs-line-numbers.js"></script>
-
-
-<script>
-    hljs.initHighlightingOnLoad();
-    hljs.initLineNumbersOnLoad();
-</script>
-            </div>
-        </div>
-    </body>
-</html>
+	<div class="footer" style="font-size:medium;">
+    	<span><br><br>Copyright © 2020 - 2024 ShinyAkira. All rights reserved.<br><i>I shall be telling this with a sigh...</i></span><br>
+	</div>
+</a></main></div></body></html>
