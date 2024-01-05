@@ -10,6 +10,6 @@ When you have spare time, you can find me there.
 
 And I babble here some of the times.
 
-© 2024 ShinyAkira. All rights reserved.
+Copyright © 2020 - 2024 ShinyAkira. All rights reserved.
 
 This website is a vulgar copycat of JJ Ying's. Sincere apologies and thanks to him.
