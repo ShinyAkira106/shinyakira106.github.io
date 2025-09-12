@@ -1,77 +1,611 @@
 <!DOCTYPE html>
-<html><head>
-
-        <!-- Google tag (gtag.js) -->
-        <script async src="https://www.googletagmanager.com/gtag/js?id=G-GRCFYWTE5B"></script>
-        <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', 'G-GRCFYWTE5B');
-        </script>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Whoops! - ShinyAkira's Website</title>
+  <meta name="description" content="Just a simple introduction of ShinyAkira, a caustic and whimsical observer and discussant.">
     
-    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport">
-    <link rel="alternate icon" type="image/png" href="https://shinyakira106.github.io/babble/img/icon.png">
+  <meta name="format-detection" content="telephone=no"> 
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta http-equiv="Imagetoolbar" content="no">
+  <meta http-equiv="Content-Language" content="en">
+  <meta http-equiv="x-dns-prefetch-control" content="on">
 
-    <!-- title -->
-    <title>Whoops~ | ShinyAkira's Babble · 我总是生产很多文字</title>
+  <!-- icon -->
+  <link rel="alternate icon" type="image/png" href="https://shinyakira106.github.io/Meterials/smallicon.png">
 
-    <link rel="stylesheet" href="./404_files/reset.css">
-    <link rel="stylesheet" href="./404_files/style.css">
-    <link rel="stylesheet" href="./404_files/markdown.css">
-    <link rel="stylesheet" href="./404_files/fonts.css">
+  <!-- OGP -->
+  <meta property="og:url" content="https://shinyakira106.github.io/">
+  <meta property="og:title" content="ShinyAkira's Website">
+  <meta property="og:image" content="https://shinyakira106.github.io/Meterials/ogp.png">
+  <meta property="og:image:type" content="image/jpeg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:description" content="Just a simple introduction of ShinyAkira, a caustic and whimsical observer and discussant.">
+  <meta property="og:site_name" content="ShinyAkira's Website">
+  <meta property="og:type" content="website">
 
-    <meta name="generator" content="Hexo 6.3.0"><style type="text/css">.hljs-ln{border-collapse:collapse}.hljs-ln td{padding:0}.hljs-ln-n:before{content:attr(data-line-number)}</style><meta http-equiv="origin-trial" content="AymqwRC7u88Y4JPvfIF2F37QKylC04248hLCdJAsh8xgOfe/dVJPV3XS3wLFca1ZMVOtnBfVjaCMTVudWM//5g4AAAB7eyJvcmlnaW4iOiJodHRwczovL3d3dy5nb29nbGV0YWdtYW5hZ2VyLmNvbTo0NDMiLCJmZWF0dXJlIjoiUHJpdmFjeVNhbmRib3hBZHNBUElzIiwiZXhwaXJ5IjoxNjk1MTY3OTk5LCJpc1RoaXJkUGFydHkiOnRydWV9"><style type="text/css">.hljs-ln{border-collapse:collapse}.hljs-ln td{padding:0}.hljs-ln-n:before{content:attr(data-line-number)}</style></head>
+  <!-- Twitter Cards -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="ShinyAkira's Website">
+  <meta name="twitter:description" content="Just a simple intro of ShinyAkira, a caustic and whimsical observer and discussant.">
+  <meta name="twitter:image:src" content="https://shinyakira106.github.io/Meterials/ogp.png">
+  <meta name="twitter:domain" content="https://shinyakira106.github.io/">
+  <style>
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  body {
+    font-family: "LaborUnion";
+    background-color: #e8e8e8;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    display: block;  
+    height: auto;
+    color: var(--text);
+    overflow-y: auto;
+    opacity: 1;
+    transition: opacity 0.5s ease;
+    background: 
+      url('https://shinyakira106.github.io/Meterials/Logo.png') right bottom / 45vw no-repeat,
+      #e8e8e8;
+  }
+  body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background: inherit;
+    filter: blur(18px) brightness(1.05);
+    transform: scale(1.1);
+    z-index: 0;
+  }
+  body.fade-out {
+    opacity: 0;
+  }
 
+  .hero {
+    max-width: 80vw;
+    line-height: 1.15;
+    font-weight: 300;
+    padding: 4vmin 5vmax;
+    transition: all var(--duration) var(--curve);
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  .text-box {
+    padding: 1rem;
+    border-radius: 0.5rem;
+  }
+  .a1-text{
+    font-size: calc(1vmin + 1.4vmax);
+    line-height: 1.5;
+    font-weight: 300;
+    font-family: 'PlayfairDisplay-Italic';
+  }
+  .a2-text{
+    font-family: 'PlayfairDisplay-Italic';
+    font-size: calc(0.6vmin + 1vmax);
+    line-height: 1.15;
+    font-weight: 300;
+  }
+  .a2-scroll-text {
+    font-family: 'PlayfairDisplay-Normal';
+  }
+  .a2-text {
+    transition: opacity 0.5s ease;
+  }
+  .a2-text.fade-out {
+    opacity: 0;
+  }
+  .a3-text{
+    font-size: calc(1vmin + 1.4vmax);
+    line-height: 1.15;
+    font-weight: 300;
+  }
+
+  p.half-line { 
+    height: 0.5em; 
+    margin: 0; 
+  }
+
+  .name:hover {
+    color: rgb(255, 98, 0);
+    font-weight: bold;
+  }
+  .describe1:hover {
+    font-family: 'SnellRoundhand';
+    font-weight: 1000;
+    font-style: italic;
+  }
+  .describe2:hover {
+    font-family: 'BradleyHandBold';
+  }
+  .describe3{
+    font-size: 0.86em;
+  }
+
+  .banner {
+    position: relative;
+    display: inline-block;
+    color: #000;
+    text-decoration: none;
+    padding-bottom: 2px;
+  }
+  .banner:hover { 
+    color: #0008ff; 
+  }
+  .banner::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 3px;
+    background-color: #0008ff;
+    transform: scale(0,1);
+    transform-origin: left;
+    transition: 0.3s;
+  }
+  .banner:hover::after { 
+    transform: scaleX(1); 
+  }
+
+  .canner {
+    font-family: 'PlayfairDisplay-Italic';
+    color: #000;
+    text-decoration: underline;
+    text-decoration-thickness: 3px;
+    text-underline-offset: 1.5px;
+    text-decoration-color: #000;
+    transition: text-decoration-color 0.3s;
+  }
+  .canner:hover { 
+    color: #0008ff; 
+    text-decoration-color: #0008ff; 
+  }
+
+  .danner {
+    position: relative;
+    display: inline-block;
+    color: #000000; 
+    text-decoration: none;
+    padding-bottom: 2px;
+  }
+  .danner:hover { 
+    color: #000000; 
+  }
+  .danner::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 3px;
+    background-color: #000000; 
+    transform: scale(0,1);
+    transform-origin: left;
+    transition: 0.3s;
+  }
+  .danner:hover::after { 
+    transform: scaleX(1); 
+  }
+
+
+  .footer-capsule {
+    position: absolute;
+    bottom: calc(2vmin + 1vmax);
+    left: calc(6vmin + 1vmax);
+    right: calc(6vmin + 1vmax);
+    margin: 0 auto;
+    background: rgba(180, 172, 163, 0.36); 
+    backdrop-filter: blur(18px) saturate(180%); /* 玻璃模糊 + 饱和度 */
+    border-radius: calc(5vmin + 2.5vmax);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: calc(1vmin + 0.5vmax) calc(3vmin + 1.5vmax);
+    box-shadow: 0 8px 24px rgba(0,0,0,0.12), inset 0 1px 0 rgba(255,255,255,0.25); /* 阴影 + 光泽 */
+    border: 1px solid rgba(255, 255, 255, 0.3); /* 半透明边框 */
+    font-size: calc(1vmin + 0.6vmax);
+    font-family: Futura;
+    z-index: 15;
+    transition: backdrop-filter 0.3s, box-shadow 0.3s; /* 平滑过渡 */
+  }
+
+  .footer-capsule:hover::before {
+    transform: rotate(25deg) translateX(100%);
+  }
+
+  .footer-text {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .footer-text span.full { display: inline; }
+  .footer-text span.short { display: none; }
+
+  @media (max-width: 1300px) {
+    .footer-text span.full { display: none; }
+    .footer-text span.short {
+      display: inline-block; 
+      text-align: left;
+    }
+    .menu { display: none; }
+    .hamburger { display: flex; }
+  }
+
+  .menu {
+    display: flex;
+    gap: 1.5vmin;
+  }
+  .menu a {
+    font-family: LaborUnion;
+    position: relative;
+    color: #000;
+    text-decoration: none;
+    font-size: max(1rem, calc(1vmin + 0.6vmax));
+  }
+  .menu a:hover { 
+    color: #000000; 
+  }
+  .menu a::after {
+    content:'';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width:100%;
+    height: 0.3vmin;
+    background-color:#000000;
+    transform:scale(0,1);
+    transform-origin:left;
+    transition: 0.3s;
+  }
+  .menu a:hover::after { 
+    transform: scaleX(1); 
+  }
+
+  .hamburger {
+    font-family: LaborUnion;
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 1.5vmin;
+  }
+  .hamburger a {
+    font-family: LaborUnion;
+    position: relative;
+    color: #000;
+    text-decoration: none;
+    font-size: max(1rem, calc(1vmin + 0.6vmax));
+  }
+  .hamburger a:hover { 
+    color: #000000; 
+  }
+  .hamburger a::after {
+    content:'';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width:100%;
+    height: 0.8vmin;
+    background-color:#000000;
+    transform:scale(0,1);
+    transform-origin:left;
+    transition: 0.3s;
+  }
+  .hamburger a:hover::after { 
+    transform: scaleX(1); 
+  }
+
+  .popup-menu {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+    padding: 1rem 1.2rem;
+    border-radius: 1rem;
+    backdrop-filter: blur(16px) saturate(180%);
+    -webkit-backdrop-filter: blur(16px) saturate(180%);
+    background: rgba(225, 221, 216, 0.35);
+    border: 1px solid rgba(225, 221, 216, 0.2);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+    font-family: Futura;
+    opacity: 0;
+    transform: translateY(20px);
+    pointer-events: none;
+    transition: opacity 0.4s ease, transform 0.4s ease;
+    z-index: 20;
+  }
+
+  .popup-menu.show {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+  }
+
+  .popup-menu a {
+    color: #000;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: color 0.3s;
+  }
+  .popup-menu a:hover {
+    color: #0008ff;
+  }
+
+
+  .highlight:hover {
+    color: rgb(255, 98, 0);
+  }
+
+  .tooltip {
+    position: absolute;
+    padding: 15px;
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(15px) saturate(180%);
+    border-radius: 16px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1), 
+                inset 0 1px 0 rgba(255, 255, 255, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    color: #000;
+    display: none;
+    z-index: 100;
+    transition: opacity 0.3s, transform 0.3s;
+    white-space: nowrap;
+    font-size: calc(0.7vmin + 0.6vmax);
+    font-family: 'Futura'; 
+  }
+  .tooltip.show {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  .tooltip.hide {
+    opacity: 0;
+    transform: translateY(-5px);
+  }
+  
+  /* Desktop Devices */
+  @media (min-width: 1600px) {
+    .hero {
+      font-size: max(1.6rem, calc(1.5vmin + 1vmax));
+    }
+    .footer-capsule {
+      font-size: max(1rem, calc(1vmin + 0.6vmax));
+    }
+    .menu a {
+      font-size: max(0.9rem, calc(0.6vmin + 0.7vmax));
+    }
+    .corner-logo-wrapper {
+      width: 360px;
+      height: 360px;
+    }
+  }
+
+  /* Mobile Devices */
+  @media (max-width: 480px) {
+    .hero {
+      font-size: min(1.2rem, calc(1.5vmin + 1vmax));
+      line-height: 1.25;
+    }
+    .footer-capsule {
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0.5rem 1rem;
+      gap: 0;
+    }
+    .footer-text { text-align: left; }
+    .menu { display: none; }
+    .hamburger { display: flex; }
+    .corner-logo-wrapper {
+      width: 180px;
+      height: 180px;
+      left: 2rem;
+      bottom: 2rem;
+    }
+  }
+
+
+  @font-face {
+    font-family: 'LaborUnion';
+    src: url('https://shinyakira106.github.io/Fonts/LaborUnion-Regular.ttf') format('truetype'); 
+  }
+  @font-face { 
+    font-family: 'Futura'; 
+    src: url('https://shinyakira106.github.io/Fonts/Futura-Medium.tff') format('truetype'); 
+  }
+  @font-face {
+    font-family: 'PlayfairDisplay-Normal';
+    src: url('https://shinyakira106.github.io/Fonts/PlayfairDisplay-Normal.ttf') format('truetype'); 
+  }
+  @font-face {
+    font-family: 'PlayfairDisplay-Italic';
+    src: url('https://shinyakira106.github.io/Fonts/PlayfairDisplay-Italic.ttf') format('truetype'); 
+  }
+  @font-face {
+    font-family: 'BradleyHandBold';
+    src: url('https://shinyakira106.github.io/Fonts/BradleyHandBold.ttf') format('truetype'); 
+  }
+  @font-face {
+    font-family: 'SnellRoundhand';
+    src: url('https://shinyakira106.github.io/Fonts/SnellRoundhand.ttf') format('truetype'); 
+  }
+
+  </style>
 </head>
 
+
 <body>
-        <div class="paper">
-            <div class="paper-main">
-                <div class="post-main">
 
-<div>
-    <div style="font-size:x-large">
-        <i>
-            Two roads diverged in a yellow wood,<br>
-            And sorry I could not travel both,<br>
-        </i>
-    </div>  
-    <p style="text-align: right;"><strong>Robert Frost</strong><br><a target="_blank" href="https://www.poetryfoundation.org/poems/44272/the-road-not-taken" class="link">The Road Not Taken (1915)</a></p>
-	<br>
-    <div style="font-size:x-large">
-        <i>	
-            And be one traveler, long I stood,<br>
-            but unfortunately, here is <strong>not the place</strong> I am going to.<br>
-        </i>
-        <i>
-            <br>And looked down one as far as I could, and —<br>
-        </i>
-            1)	Just take the first one, <u><a href="https://shinyakira106.github.io/" class="link">as just as fair</a></u>.<br>
-            2)	Or <u><a href="https://shinyakira106.github.io/babble/" class="link">keep the first for another day!</a></u><br>
-     </div>
- </div>
+<section class="hero">
+  <div class="text-box">
+    <div class="a1">
+      <span class="a1-text">
+       When I have fears that I may cease to be <br>
+        Before my pen has gleaned my teeming brain <br>
+        Before high-piled books, in charactery, <br>
+        Hold like rich garners the full ripen'd grain; <br>
+        When I behold, upon the night's starr'd face, <br>
+        Huge cloudy symbols of a high romance, <br>
+        And think that I may never live to trace…
+      </span>
+    </div>
+    <div class="a2">
+      <span class="a2-text"> - 
+         <a class="danner" target="_blank" href="https://en.wikipedia.org/wiki/When_I_Have_Fears" style="font-family: 'PlayfairDisplay-Normal';">John Keats</a>, 
+         <a class="danner" target="_blank" href="https://www.poetryfoundation.org/poems/44488/when-i-have-fears-that-i-may-cease-to-be">When I have Fears(1818)</a>
+      </span>
+    </div>
+    <div class="a3">
+      <span class="a3-text">
+        <br>Caution!
+        <br>Area Under Construction!
+        <br>Sorry for the inconvenience!<br>
+        <div style="font-family: 'Futura';font-size: calc(0.8vmin + 0.7vmax);">
+          <br>for more <span class="highlight" id="sample">information</span> please call
+          <a class="banner" target="_blank" href="https://shinyakira106.github.io/">468763828466</a> or 
+          <a class="banner" target="_blank" href="https://shinyakira106.github.io/babble/">86-843-222253</a>
+        </div> 
+      </span>
+    </div>
+  </div>    
+</section>
 
-    
+<footer class="footer-capsule">
+  <div class="footer-text">
+    <span class="full">©️ShinyAkira 2025. All rights reserved.</span>
+    <span class="short">©️ShinyAkira 2025</span>
+  </div>
 
+  <nav class="menu">
+    <a href="https://shinyakira106.github.io/">Introduction</a>
+    <a href="#portfolio">Portfolio</a>
+    <a href="https://shinyakira106.github.io/babble/">Babble</a>
+  </nav>
+
+  <div class="hamburger" id="hamburger">
+    <a>Menu</a>
+  </div>
+</footer>
+
+<div class="popup-menu" id="popupMenu">
+    <a href="https://shinyakira106.github.io/">Introduction</a>
+    <a href="#portfolio">Portfolio</a>
+    <a href="https://shinyakira106.github.io/babble/">Babble</a>
 </div>
-<br>
-<div style="font-size:small">
-  <font color="#919191" size="2" px="">
-    © 2020 - 2024 ShinyAkira. All rights reserved.<br>
-    <i>I shall be telling this with a sigh...</i>
-  </font>
-</div>
 
-<link rel="stylesheet" href="./404_files/a11y-dark.min.css">
-<script src="./404_files/highlight.min.js"></script>
-<script src="./404_files/highlightjs-line-numbers.js"></script>
+<div class="tooltip" id="tooltip">
+  Phone Number is Dialpad T9 Puzzle Game.
+</div>
 
 <script>
-    hljs.initHighlightingOnLoad();
-    hljs.initLineNumbersOnLoad();
+  const hamburger = document.getElementById('hamburger');
+  const popupMenu = document.getElementById('popupMenu');
+  const footerCapsule = document.querySelector('.footer-capsule');
+  let popupTimeout;
+
+  function showPopupMenu() {
+    popupMenu.style.opacity = '0';
+    popupMenu.style.pointerEvents = 'none';
+    popupMenu.classList.add('show');
+
+    const capsuleRect = footerCapsule.getBoundingClientRect();
+    const menuRect = popupMenu.getBoundingClientRect();
+
+    popupMenu.style.left = (capsuleRect.right - menuRect.width) + 'px';
+    popupMenu.style.top = (capsuleRect.top - menuRect.height - 15) + 'px';
+
+    requestAnimationFrame(() => {
+      popupMenu.style.opacity = '1';
+      popupMenu.style.transform = 'translateY(0)';
+      popupMenu.style.pointerEvents = 'auto';
+    });
+
+    if (popupTimeout) clearTimeout(popupTimeout);
+    popupTimeout = setTimeout(hidePopupMenu, 5000);
+  }
+
+  function hidePopupMenu() {
+    popupMenu.style.opacity = '0';
+    popupMenu.style.transform = 'translateY(20px)';
+    popupMenu.style.pointerEvents = 'none';
+    setTimeout(() => popupMenu.classList.remove('show'), 400);
+  }
+
+  hamburger.addEventListener('click', (e) => {
+    e.stopPropagation();
+    if (popupMenu.classList.contains('show')) {
+      hidePopupMenu();
+    } else {
+      showPopupMenu();
+    }
+  });
+
+  document.addEventListener('click', (e) => {
+    if (!e.target.closest('#popupMenu') && !e.target.closest('#hamburger')) {
+      hidePopupMenu();
+    }
+  });
+  
+  document.querySelectorAll("a[href]").forEach(link => {
+    link.addEventListener("click", function (e) {
+      e.preventDefault();
+      const url = this.href;
+      document.body.classList.add("fade-out");
+      setTimeout(() => {
+        window.location.href = url;
+      }, 260);
+    });
+  });
+
+  const highlight = document.getElementById('sample');
+  const tooltip = document.getElementById('tooltip');
+  let hideTimeout;
+
+  function showTooltip() {
+    clearTimeout(hideTimeout);
+    tooltip.style.display = 'block';
+    tooltip.classList.remove('hide');
+    tooltip.classList.add('show');
+    const rect = highlight.getBoundingClientRect();
+    let left = rect.left + window.scrollX;
+    let top = rect.bottom + window.scrollY + 5;
+    tooltip.style.top = top + 'px';
+    tooltip.style.left = left + 'px';
+    tooltip.style.width = 'auto';
+    const tooltipRect = tooltip.getBoundingClientRect();
+    const overflowX = tooltipRect.right - window.innerWidth;
+    if (overflowX > 0) {
+      tooltip.style.left = (left - overflowX - 5) + 'px';
+    }
+    hideTimeout = setTimeout(hideTooltip, 3000);
+  }
+
+  function hideTooltip() {
+    tooltip.classList.remove('show');
+    tooltip.classList.add('hide');
+    setTimeout(() => {
+      tooltip.style.display = 'none';
+    }, 300);
+  }
+
+  highlight.addEventListener('mouseenter', showTooltip);
+  highlight.addEventListener('click', showTooltip);
+
+  document.addEventListener('click', (e) => {
+    if (!highlight.contains(e.target) && !tooltip.contains(e.target)) {
+      hideTooltip();
+    }
+  });
+
+
+
 </script>
-            </div>
-        </div>
-    
-</body></html>
+
+</body>
+</html>

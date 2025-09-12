@@ -1,286 +1,762 @@
 <!DOCTYPE html>
-<!-- saved from url=(0032)https://shinyakira106.github.io/ -->
-<html lang="zh-cmn-Hans"><head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><style type="text/css">
-	
-	<!-- Google tag (gtag.js) -->
-        <script async src="https://www.googletagmanager.com/gtag/js?id=G-GRCFYWTE5B"></script>
-        <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', 'G-GRCFYWTE5B');
-        </script>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ShinyAkira's Website</title>
+  <meta name="description" content="Just a simple introduction of ShinyAkira, a caustic and whimsical observer and discussant.">
+    
+  <meta name="format-detection" content="telephone=no"> 
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta http-equiv="Imagetoolbar" content="no">
+  <meta http-equiv="Content-Language" content="en">
+  <meta http-equiv="x-dns-prefetch-control" content="on">
 
-	/* cyrillic */
-@font-face {
-  font-family: 'Playfair Display';
-  font-style: italic;
-  font-weight: 300;
-  font-display: block;
-  src: url(https://fonts.gstatic.com/s/playfairdisplay/v30/nuFkD-vYSZviVYUb_rj3ij__anPXDTnohkk7yRZrPJ-M.woff2) format('woff2');
-  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
-}
-/* vietnamese */
-@font-face {
-  font-family: 'Playfair Display';
-  font-style: italic;
-  font-weight: 300;
-  font-display: block;
-  src: url(https://fonts.gstatic.com/s/playfairdisplay/v30/nuFkD-vYSZviVYUb_rj3ij__anPXDTnojUk7yRZrPJ-M.woff2) format('woff2');
-  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+1EA0-1EF9, U+20AB;
-}
-/* latin-ext */
-@font-face {
-  font-family: 'Playfair Display';
-  font-style: italic;
-  font-weight: 300;
-  font-display: block;
-  src: url(https://fonts.gstatic.com/s/playfairdisplay/v30/nuFkD-vYSZviVYUb_rj3ij__anPXDTnojEk7yRZrPJ-M.woff2) format('woff2');
-  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
-}
-/* latin */
-@font-face {
-  font-family: 'Playfair Display';
-  font-style: italic;
-  font-weight: 300;
-  font-display: block;
-  src: url(https://fonts.gstatic.com/s/playfairdisplay/v30/nuFkD-vYSZviVYUb_rj3ij__anPXDTnogkk7yRZrPA.woff2) format('woff2');
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-}
-/* cyrillic */
-@font-face {
-  font-family: 'Playfair Display';
-  font-style: italic;
-  font-weight: 360;
-  font-display: block;
-  src: url(https://fonts.gstatic.com/s/playfairdisplay/v30/nuFkD-vYSZviVYUb_rj3ij__anPXDTnohkk7yRZrPJ-M.woff2) format('woff2');
-  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
-}
-/* vietnamese */
-@font-face {
-  font-family: 'Playfair Display';
-  font-style: italic;
-  font-weight: 360;
-  font-display: block;
-  src: url(https://fonts.gstatic.com/s/playfairdisplay/v30/nuFkD-vYSZviVYUb_rj3ij__anPXDTnojUk7yRZrPJ-M.woff2) format('woff2');
-  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+1EA0-1EF9, U+20AB;
-}
-/* latin-ext */
-@font-face {
-  font-family: 'Playfair Display';
-  font-style: italic;
-  font-weight: 360;
-  font-display: block;
-  src: url(https://fonts.gstatic.com/s/playfairdisplay/v30/nuFkD-vYSZviVYUb_rj3ij__anPXDTnojEk7yRZrPJ-M.woff2) format('woff2');
-  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
-}
-/* latin */
-@font-face {
-  font-family: 'Playfair Display';
-  font-style: italic;
-  font-weight: 360;
-  font-display: block;
-  src: url(https://fonts.gstatic.com/s/playfairdisplay/v30/nuFkD-vYSZviVYUb_rj3ij__anPXDTnogkk7yRZrPA.woff2) format('woff2');
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-}
-/* cyrillic */
-@font-face {
-  font-family: 'Playfair Display';
-  font-style: normal;
-  font-weight: 300;
-  font-display: block;
-  src: url(https://fonts.gstatic.com/s/playfairdisplay/v30/nuFvD-vYSZviVYUb_rj3ij__anPXJzDwcbmjWBN2PKdFvXDTbtXK-F2qC0usEw.woff) format('woff');
-  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
-}
-/* vietnamese */
-@font-face {
-  font-family: 'Playfair Display';
-  font-style: normal;
-  font-weight: 300;
-  font-display: block;
-  src: url(https://fonts.gstatic.com/s/playfairdisplay/v30/nuFvD-vYSZviVYUb_rj3ij__anPXJzDwcbmjWBN2PKdFvXDYbtXK-F2qC0usEw.woff) format('woff');
-  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+1EA0-1EF9, U+20AB;
-}
-/* latin-ext */
-@font-face {
-  font-family: 'Playfair Display';
-  font-style: normal;
-  font-weight: 300;
-  font-display: block;
-  src: url(https://fonts.gstatic.com/s/playfairdisplay/v30/nuFvD-vYSZviVYUb_rj3ij__anPXJzDwcbmjWBN2PKdFvXDZbtXK-F2qC0usEw.woff) format('woff');
-  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
-}
-/* latin */
-@font-face {
-  font-family: 'Playfair Display';
-  font-style: normal;
-  font-weight: 300;
-  font-display: block;
-  src: url(https://fonts.gstatic.com/s/playfairdisplay/v30/nuFvD-vYSZviVYUb_rj3ij__anPXJzDwcbmjWBN2PKdFvXDXbtXK-F2qC0s.woff) format('woff');
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-}
+  <!-- icon -->
+  <link rel="alternate icon" type="image/png" href="https://shinyakira106.github.io/Meterials/smallicon.png">
 
-@charset "utf-8";
-*{
-	margin: 0;
-	padding: 0;
-	border: 0;
-	vertical-align: baseline;
-	box-sizing: border-box;
-	-webkit-tap-highlight-color: transparent;
-}
-body{
-	--bg: rgba(189, 188, 188, 0.8);
-	--text: #000000;
-	--duration: .2s;
-	--curve: ease-out;
-	font-family: Playfair Display;
-	text-rendering: optimizeLegibility;
-	-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
-	display: flex;
-	justify-content: center; align-items: center;
-	width: 100vw; height: 100vh;
-	color: var(--text);
-	overflow: hidden;
-}
-a{
-	color: var(--text);
-	text-decoration: none;
-}
-::selection{
-	color: var(--bg);
-	background: var(--text);
-	text-shadow: none;
-}
-main{
-	font-size: calc(1vmin + 2.4vmax);
-	max-width: 50ch;
-	line-height: 1.65;
-	font-weight: 300;
-	padding: 1em 1.5em;
-	background: var(--bg);
-	backdrop-filter: blur(21px);
-	transition: all var(--duration) var(--curve);
-	color: var(--text);
-}
-.hovered main{
-	--text: #fff;
-	--bg: #000;
-}
-.link{
-	font-style: italic;
-	font-weight: 300;
-	position: relative;
-	display: inline-block;
-	z-index: 9;
-	transition: all var(--duration) var(--curve);
-	text-shadow: .03em 0 0 var(--bg), -.03em 0 0 var(--bg), .08em 0 0 var(--bg), -.08em 0 0 var(--bg);
+  <!-- OGP -->
+  <meta property="og:url" content="https://shinyakira106.github.io/">
+  <meta property="og:title" content="ShinyAkira's Website">
+  <meta property="og:image" content="https://shinyakira106.github.io/Meterials/ogp.png">
+  <meta property="og:image:type" content="image/jpeg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:description" content="Just a simple introduction of ShinyAkira, a caustic and whimsical observer and discussant.">
+  <meta property="og:site_name" content="ShinyAkira's Website">
+  <meta property="og:type" content="website">
 
-	text-shadow:
-		.08em 0 0 var(--bg),
-		-.08em 0 0 var(--bg),
-		.06em 0 0 var(--bg),
-		-.06em 0 0 var(--bg),
-		.07em 0 0 var(--bg),
-		-.07em 0 0 var(--bg),
-		.03em 0 0 var(--bg),
-		-.03em 0 0 var(--bg),
-		.04em 0 0 var(--bg),
-		-.04em 0 0 var(--bg);
-	/* text-decoration: underline; */
-	/* text-decoration-color: #69c; */
-}
-.link:hover{
-	/* color: #56BFD0; */
-}
-.hovered .link{
-	text-shadow: none;
-}
-.link::after{
-	content: "";
-	position: absolute;
-	bottom: .32em; left: 0;
-	width: 100%;
-	height: .06em;
-	border-radius: 1em;
-	background: var(--text);
-	z-index: -1;
-	transition: all var(--duration) var(--curve);
-}
-.link:hover::after{
-	background: #1066b7;
-}
-.u{
-	border-bottom: 1px solid #333;
-	line-height: 1;
-	display: inline-block;
-}
-.main-bg{
-	position: fixed;
-	left: 0; top: 0;
-	width: 100%; height: 100%;
-	z-index: -1;
-	opacity: 0;
-	transition: all .2s ease-out;
-
-	background-color: #ccc;
-	background-image: linear-gradient(45deg, black 25%, transparent 25%, transparent 75%, black 75%, black),
-	linear-gradient(-45deg, black 25%, transparent 25%, transparent 75%, black 75%, black);
-	background-size: 2px 2px;
-
-}
-.hovered .main-bg{
-	opacity: 1;
-	transition: all .3s ease-out;
-}
-.main-bg video{
-	width: 100%; height: 100%;
-	object-fit: cover;
-	opacity: .8;
-}
-.dummy{
-	display: inline-block;
-}
-
-</style>
+  <!-- Twitter Cards -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="ShinyAkira's Website">
+  <meta name="twitter:description" content="Just a simple intro of ShinyAkira, a caustic and whimsical observer and discussant.">
+  <meta name="twitter:image:src" content="https://shinyakira106.github.io/Meterials/ogp.png">
+  <meta name="twitter:domain" content="https://shinyakira106.github.io/">
+  <style>
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: "LaborUnion";
+    background-color: #e8e8e8;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    display: block;  
+    height: auto;
+    color: var(--text);
+    overflow-y: auto;
+    opacity: 1;
+    transition: opacity 0.5s ease;
+    background: 
+      url('https://shinyakira106.github.io/Meterials/Logo.png') right bottom / 45vw no-repeat,
+      #e8e8e8;
+  }
+  body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background: inherit;
+    filter: blur(18px) brightness(1.05);
+    transform: scale(1.1);
+    z-index: 0;
+  }
+  body.fade-out {
+    opacity: 0;
+  }
 
 
+  .hero {
+    max-width: 80vw;
+    line-height: 1.15;
+    font-weight: 300;
+    padding: 4vmin 5vmax;
+    transition: all var(--duration) var(--curve);
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  .text-box {
+    padding: 1rem;
+    border-radius: 0.5rem;
+  }
+  .a1-text{
+    font-size: calc(2vmin + 2vmax);
+    line-height: 1.15;
+    font-weight: 300;
+  }
+  .a2-text{
+    font-size: calc(1vmin + 1.4vmax);
+    line-height: 1.15;
+    font-weight: 300;
+  }
+  .a2-scroll-text {
+    font-family: 'PlayfairDisplay-Normal';
+  }
+  .a2-text {
+    transition: opacity 0.5s ease;
+  }
+  .a2-text.fade-out {
+    opacity: 0;
+  }
+  .a3-text{
+    font-size: calc(0.5vmin + 0.7vmax);
+    font-weight: 300;
+    color: #636161; 
+    font-family: 'PlayfairDisplay-Italic';
+  }
 
-	
-		
-		
-		<title>ShinyAkira's Personal Webpage</title>
-		<meta name="robots" content="noodp">
-		<meta name="author" content="ShinyAkira">
-		<meta name="description" content="ShinyAkira&#39;s Personal Webpage">
+  p.half-line { 
+    height: 0.5em; 
+    margin: 0; 
+  }
 
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+  .name:hover {
+    color: rgb(237, 151, 36);
+    font-weight: bold;
+  }
+  .describe1:hover {
+    font-family: '3270-Regular';
+    font-weight: 900;
+    font-size: 1.2em;
+  }
+  .describe2:hover {
+    font-family: 'BradleyHandBold';
+    font-size: 1.1em;
+  }
+  .describe3{
+    font-size: 0.86em;
+  }
 
-		<meta property="og:type" content="website">
-		<meta property="og:title" content="ShinyAkira">
-		<meta property="og:description" content="ShinyAkira&#39;s Personal Webpage">
-		<meta property="og:image" content="">
+  .banner {
+    position: relative;
+    display: inline-block;
+    color: #000;
+    text-decoration: none;
+    padding-bottom: 2px;
+  }
+  .banner:hover { 
+    color: #0008ff; 
+  }
+  .banner::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 3px;
+    background-color: #0008ff;
+    transform: scale(0,1);
+    transform-origin: left;
+    transition: 0.3s;
+  }
+  .banner:hover::after { 
+    transform: scaleX(1); 
+  }
 
-	<meta http-equiv="origin-trial" content="AymqwRC7u88Y4JPvfIF2F37QKylC04248hLCdJAsh8xgOfe/dVJPV3XS3wLFca1ZMVOtnBfVjaCMTVudWM//5g4AAAB7eyJvcmlnaW4iOiJodHRwczovL3d3dy5nb29nbGV0YWdtYW5hZ2VyLmNvbTo0NDMiLCJmZWF0dXJlIjoiUHJpdmFjeVNhbmRib3hBZHNBUElzIiwiZXhwaXJ5IjoxNjk1MTY3OTk5LCJpc1RoaXJkUGFydHkiOnRydWV9"></head>
+  .canner {
+    font-family: 'PlayfairDisplay-Italic';
+    color: #000;
+    text-decoration: underline;
+    text-decoration-thickness: 3px;
+    text-underline-offset: 1.5px;
+    text-decoration-color: #000;
+    transition: text-decoration-color 0.3s;
+  }
+  .canner:hover { 
+    color: #0008ff; 
+    text-decoration-color: #0008ff; 
+  }
+
+  .danner {
+    position: relative;
+    display: inline-block;
+    color: #636161; 
+    text-decoration: none;
+    padding-bottom: 2px;
+  }
+  .danner:hover { 
+    color: #636161; 
+  }
+  .danner::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 1.6px;
+    background-color: #636161; 
+    transform: scale(0,1);
+    transform-origin: left;
+    transition: 0.3s;
+  }
+  .danner:hover::after { 
+    transform: scaleX(1); 
+  }
+
+
+  .footer-capsule {
+    position: absolute;
+    bottom: calc(2vmin + 1vmax);
+    left: calc(6vmin + 1vmax);
+    right: calc(6vmin + 1vmax);
+    margin: 0 auto;
+    background: rgba(180, 172, 163, 0.36); 
+    backdrop-filter: blur(18px) saturate(180%); /* 玻璃模糊 + 饱和度 */
+    border-radius: calc(5vmin + 2.5vmax);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: calc(1vmin + 0.5vmax) calc(3vmin + 1.5vmax);
+    box-shadow: 0 8px 24px rgba(0,0,0,0.12), inset 0 1px 0 rgba(255,255,255,0.25); /* 阴影 + 光泽 */
+    border: 1px solid rgba(255, 255, 255, 0.3); /* 半透明边框 */
+    font-size: calc(1vmin + 0.6vmax);
+    font-family: Futura;
+    z-index: 15;
+    transition: backdrop-filter 0.3s, box-shadow 0.3s; /* 平滑过渡 */
+  }
+
+  .footer-capsule:hover::before {
+    transform: rotate(25deg) translateX(100%);
+  }
+
+  .footer-text {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .footer-text span.full { display: inline; }
+  .footer-text span.short { display: none; }
+
+  @media (max-width: 1300px) {
+    .footer-text span.full { display: none; }
+    .footer-text span.short {
+      display: inline-block; 
+      text-align: left;
+    }
+    .menu { display: none; }
+    .hamburger { display: flex; }
+  }
+
+  .menu {
+    display: flex;
+    gap: 1.5vmin;
+  }
+  .menu a {
+    font-family: LaborUnion;
+    position: relative;
+    color: #000;
+    text-decoration: none;
+    font-size: max(1rem, calc(1vmin + 0.6vmax));
+  }
+  .menu a:hover { 
+    color: #000000; 
+  }
+  .menu a::after {
+    content:'';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width:100%;
+    height: 0.3vmin;
+    background-color:#000000;
+    transform:scale(0,1);
+    transform-origin:left;
+    transition: 0.3s;
+  }
+  .menu a:hover::after { 
+    transform: scaleX(1); 
+  }
+
+  .hamburger {
+    font-family: LaborUnion;
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 1.5vmin;
+  }
+  .hamburger a {
+    font-family: LaborUnion;
+    position: relative;
+    color: #000;
+    text-decoration: none;
+    font-size: max(1rem, calc(1vmin + 0.6vmax));
+  }
+  .hamburger a:hover { 
+    color: #000000; 
+  }
+  .hamburger a::after {
+    content:'';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width:100%;
+    height: 0.8vmin;
+    background-color:#000000;
+    transform:scale(0,1);
+    transform-origin:left;
+    transition: 0.3s;
+  }
+  .hamburger a:hover::after { 
+    transform: scaleX(1); 
+  }
+
+  .popup-menu {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+    padding: 1rem 1.2rem;
+    border-radius: 1rem;
+    backdrop-filter: blur(16px) saturate(180%);
+    -webkit-backdrop-filter: blur(16px) saturate(180%);
+    background: rgba(225, 221, 216, 0.35);
+    border: 1px solid rgba(225, 221, 216, 0.2);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+    font-family: Futura;
+    opacity: 0;
+    transform: translateY(20px);
+    pointer-events: none;
+    transition: opacity 0.4s ease, transform 0.4s ease;
+    z-index: 20;
+  }
+
+  .popup-menu.show {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+  }
+
+  .popup-menu a {
+    color: #000;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: color 0.3s;
+  }
+  .popup-menu a:hover {
+    color: #0008ff;
+  }
+
+  .highlight:hover {
+    color: rgb(255, 98, 0);
+  }
+
+
+
+  .tooltip {
+    position: absolute;
+    padding: 15px 20px;
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(18px) saturate(180%);
+    border-radius: 16px;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.12), inset 0 1px 0 rgba(255,255,255,0.25);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    color: #000;
+    display: none;
+    z-index: 100;
+    white-space: nowrap;
+    overflow: hidden;
+    font-size: calc(0.5vmin + 0.5vmax);
+    font-family: 'Futura';
+    transition: opacity 0.3s ease, transform 0.3s ease;
+  }
+  .tooltip.show {
+    display: block;
+    opacity: 1;
+    transform: translateY(0);
+  }
+  .tooltip.hide {
+    opacity: 0;
+    transform: translateY(-5px);
+  }
+    
+  /* Desktop Devices */
+  @media (min-width: 1600px) {
+    .hero {
+      font-size: max(1.6rem, calc(1.5vmin + 1vmax));
+    }
+    .footer-capsule {
+      font-size: max(1rem, calc(1vmin + 0.6vmax));
+    }
+    .menu a {
+      font-size: max(0.9rem, calc(0.6vmin + 0.7vmax));
+    }
+    .corner-logo-wrapper {
+      width: 360px;
+      height: 360px;
+    }
+  }
+
+  /* Mobile Devices */
+  @media (max-width: 480px) {
+    .hero {
+      font-size: min(1.2rem, calc(1.5vmin + 1vmax));
+      line-height: 1.25;
+    }
+    .footer-capsule {
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0.5rem 1rem;
+      gap: 0;
+    }
+    .footer-text { text-align: left; }
+    .menu { display: none; }
+    .hamburger { display: flex; }
+    .corner-logo-wrapper {
+      width: 180px;
+      height: 180px;
+      left: 2rem;
+      bottom: 2rem;
+    }
+  }
+
+
+  @font-face {
+    font-family: 'LaborUnion';
+    src: url('https://shinyakira106.github.io/Fonts/LaborUnion-Regular.ttf') format('truetype'); 
+  }
+  @font-face { 
+    font-family: 'Futura'; 
+    src: url('https://shinyakira106.github.io/Fonts/Futura-Medium.tff') format('truetype'); 
+  }
+  @font-face {
+    font-family: 'PlayfairDisplay-Normal';
+    src: url('https://shinyakira106.github.io/Fonts/PlayfairDisplay-Normal.ttf') format('truetype'); 
+  }
+  @font-face {
+    font-family: 'PlayfairDisplay-Italic';
+    src: url('https://shinyakira106.github.io/Fonts/PlayfairDisplay-Italic.ttf') format('truetype'); 
+  }
+  @font-face {
+    font-family: 'BradleyHandBold';
+    src: url('https://shinyakira106.github.io/Fonts/BradleyHandBold.ttf') format('truetype'); 
+  }
+
+  @font-face {
+    font-family: 'SnellRoundhand';
+    src: url('https://shinyakira106.github.io/Fonts/SnellRoundhand.ttf') format('truetype'); 
+  }
+  @font-face {
+    font-family: 'Zapfino';
+    src: url('https://shinyakira106.github.io/Fonts/Zapfino.ttf') format('truetype'); 
+  }
+  @font-face {
+    font-family: '3270-Regular';
+    src: url('https://shinyakira106.github.io/Fonts/3270-Regular.ttf') format('truetype'); 
+  }
+
+  @font-face {
+    font-family: 'TeyvatBlack-Regular';
+    src: url('https://shinyakira106.github.io/Fonts/TeyvatBlack-Regular.ttf') format('truetype'); 
+  }
+  @font-face {
+    font-family: 'StarRailNeue-Serif-Bold';
+    src: url('https://shinyakira106.github.io/Fonts/StarRailNeue-Serif-Bold.ttf') format('truetype'); 
+  }
+  @font-face {
+    font-family: 'ZZZSystem-Regular';
+    src: url('https://shinyakira106.github.io/Fonts/ZZZSystem-Regular.ttf') format('truetype'); 
+  }
+  @font-face {
+    font-family: 'Arknights-Endfield';
+    src: url('https://shinyakira106.github.io/Fonts/Arknights-Endfield.ttf') format('truetype'); 
+  }
+  @font-face {
+    font-family: 'Montserrat-Bold';
+    src: url('https://shinyakira106.github.io/Fonts/Montserrat-Bold.ttf') format('truetype'); 
+  }
+
+  </style>
+</head>
+
+
 <body>
-	<div id="wrapper" class=""><main style="--text:#333; --bg:rgba(255, 255, 255, 0.7);">
-			I am <b>ShinyAkira</b>, <br>
-			a caustic and whimsical observer and discussant. <br>
-			I am fascinated with <i><u>tech, anime, rail and design</u></i>
-			and recently engaged in relevant research.
-			I live <a target="blank" href="https://en.wikipedia.org/wiki/Nanjing" class="link">here</a> nowadays, and I learned how to behave <a target="blank" href="https://en.wikipedia.org/wiki/Jiujiang" class="link">there</a> in a very young age.
-			Apart from <a target="blank" href="https://www.bilibili.com/" class="link">here</a>, I deepen my insights in a place called society.<br>
-			When you have spare time, you can find me <a target="blank" href="https://twitter.com/shinyakira106" class="link">there</a>.<br>
-			And I babble <i><u><a href="https://shinyakira106.github.io/babble/" class="link"><font color="#1066b7">here</font></a></u></i> some of the times.<br>
 
-	<div class="footer" style="font-size:medium;">
-    	<span><br><br>© 2024 ShinyAkira. All rights reserved.</span><br>
-	</div>
-	<div class="footer2" style="font-size:small;">
-    	<span>This website is a vulgar copycat of <a target="_blank" href="https://jjying.com/"><u>JJ Ying's</u></a>. Sincere apologies and thanks to him.</span></div>
+<section class="hero">
+  <div class="text-box">
+    <div class="a1">
+      <span class="a1-text">
+        I am <span class="name">ShinyAkira</span>
+        <p>a <span class="describe1">Caustic</span> & <span class="describe2">Whimsical</span><br>observer and discussant.</p>
+      </span>
+    </div>
+    <div class="a2">
+      <span class="a2-text">
+        <br>also a 
+        <span class="tooltip-trigger" 
+              data-tooltip='Font courtesy of GitHub Project <a class="banner" target="_blank" href="https://github.com/SpeedyOrc-C/HoYo-Glyphs">HoYo-Glyphs</a>.<br>Many thanks to all contributors!'>
+          <a class="banner" target="_blank" href="https://genshin.hoyoverse.com/en/home/">TRAVELER</a>,
+        </span>
+        <span class="tooltip-trigger" 
+              data-tooltip='Font Courtesy of GitHub Project <a class="banner" target="_blank" href="https://github.com/SpeedyOrc-C/HoYo-Glyphs">HoYo-Glyphs</a>.<br>Many thanks to all contributors!'>
+          <a class="banner" target="_blank" href="https://hsr.hoyoverse.com/en-us/home/">TRAILBLAZER</a>, 
+        </span>
+        <span class="tooltip-trigger" 
+              data-tooltip='Font courtesy of GitHub Project <a class="banner" target="_blank" href="https://github.com/SpeedyOrc-C/HoYo-Glyphs">HoYo-Glyphs</a>.<br>Many thanks to all contributors!'>
+          <a class="banner" target="_blank" href="https://zenless.hoyoverse.com/en-us/">PROXY</a>,
+        </span>
+        <span class="tooltip-trigger" 
+              data-tooltip='Font courtesy of GitHub Project <a class="banner" target="_blank" href="https://github.com/lhclbt/Endfield_Font">Endfield-Font</a>.<br>Many thanks to the contributor!'>
+          <a class="banner" target="_blank" href="https://ak.hypergryph.com/">DOCTOR</a> &
+        </span>
+        <span class="tooltip-trigger" 
+              data-tooltip="Font Montserrat by Julieta Ulanovsky <em>et al.</em><br>Licensed under SIL Open Font License (OFL).<br>Used by SEGA in HATSUNE MIKU: COLORFUL STAGE.<br><span style='font-size: calc(0.3vmin + 0.3vmax);'>© SEGA / © Colorful Palette Inc. / © Crypton Future Media, INC.</span>">
+          <a class="banner" target="_blank" href="https://pjsekai.sega.jp/">SEKAIer</a>.
+        </span>
+        <br><span class="describe3"><del>Teck Otaku, Tabun</del></span>
+      </span>
+    </div>
+    <div class="a3">
+      <span class="a3-text">
+        <br>”Do not inquire why I am mute- <span class="highlight tooltip-trigger" data-tooltip="Click the Blank Space to show more info.">The Blank</span> reveals far more of Words.“
+        <br>- <a class="danner" target="_blank" href="https://ja.wikipedia.org/wiki/%E3%83%87%E3%83%AC%E3%82%AF%E3%83%BB%E3%83%8F%E3%83%BC%E3%83%88%E3%83%95%E3%82%A3%E3%83%BC%E3%83%AB%E3%83%89" style="font-family: 'PlayfairDisplay-Normal';">Derek Heartfield</a>, 
+        <a class="danner" target="_blank" href="https://en.wikipedia.org/wiki/Hear_the_Wind_Sing">See the Rain Shock(1938)</a>
+      </span>
+    </div>
+  </div>
+</section>
+
+<footer class="footer-capsule">
+  <div class="footer-text">
+    <span class="full">©️ShinyAkira 2025. All rights reserved.</span>
+    <span class="short">©️ShinyAkira 2025</span>
+  </div>
+
+  <nav class="menu">
+    <a href="https://shinyakira106.github.io/">Introduction</a>
+    <a href="#portfolio">Portfolio</a>
+    <a href="https://shinyakira106.github.io/babble/">Babble</a>
+  </nav>
+
+  <div class="hamburger" id="hamburger">
+    <a>Menu</a>
+  </div>
+</footer>
+
+<div class="popup-menu" id="popupMenu">
+    <a href="https://shinyakira106.github.io/">Introduction</a>
+    <a href="#portfolio">Portfolio</a>
+    <a href="https://shinyakira106.github.io/babble/">Babble</a>
+</div>
+
+<div class="tooltip" id="tooltip"></div>
+
+<script>
+  const fontMap = {
+    "TRAVELER": { font: "TeyvatBlack-Regular", scale: 0.7 },
+    "TRAILBLAZER": { font: "StarRailNeue-Serif-Bold", scale: 1},
+    "PROXY": { font: "ZZZSystem-Regular", scale: 0.6 },
+    "DOCTOR": { font: "Arknights-Endfield", scale: 1 },
+    "SEKAIer": { font: "Montserrat-Bold", scale: 1 }
+  };
+  const defaultFontSize = window.getComputedStyle(document.querySelector(".a2-text")).fontSize;
+  const lineHeight = window.getComputedStyle(document.querySelector(".a2-text")).lineHeight;
+
+  document.querySelectorAll(".banner").forEach(el => {
+    const text = el.textContent.trim();
+    if (fontMap[text]) {
+      el.style.display = "inline-block";
+      el.style.verticalAlign = "middle";
+      el.style.lineHeight = lineHeight;
+
+      el.addEventListener("mouseenter", () => {
+        const item = fontMap[text];
+        el.style.fontFamily = item.font;
+        el.style.fontSize = `calc(${defaultFontSize} * ${item.scale})`;
+      });
+
+      el.addEventListener("mouseleave", () => {
+        el.style.fontFamily = "";
+        el.style.fontSize = defaultFontSize;
+      });
+    }
+  });
+
+  const a2Text = document.querySelector('.a2-text');
+  const originalHTML = a2Text.innerHTML;
+  let timeoutId;
+  const scrollHTML = `
+    <span class="a2-scroll-text">
+      <br>I am fascinated with <span style="font-weight: bold;">AI, IT, Rail, Anime & Design</span>,<br>
+      and am currently engaged in relevant research.<br>
+      <p class="half-line"></p>
+      I start my new life <a target="_blank" href="https://en.wikipedia.org/wiki/Brisbane" class="canner">here</a> nowadays, far away from my <a target="_blank" href="https://en.wikipedia.org/wiki/Nanjing" class="canner">home</a>.<br>
+      And I learned how to behave <a target="_blank" href="https://en.wikipedia.org/wiki/Jiujiang" class="canner">there</a> in a very young age.<br>
+      Apart from <a target="_blank" href="https://www.bilibili.com/" class="canner">here</a>, I deepen my insights in a place called society.<br>
+      <p class="half-line"></p>
+      When you have spare time, you can find me <a target="_blank" href="https://twitter.com/shinyakira106" class="canner">there</a>.<br>
+      And I babble <i><u><a href="https://shinyakira106.github.io/babble/" class="canner"><span style="color:#0008ff;">here</span></a></u></i> some of the times.<br>
+    </span>
+  `;
+  const showScrollMessage = () => {
+    if (timeoutId) clearTimeout(timeoutId);
+    a2Text.classList.add('fade-out');
+    setTimeout(() => {
+      a2Text.innerHTML = scrollHTML;
+      a2Text.classList.remove('fade-out');
+    }, 500);
+    timeoutId = setTimeout(() => {
+      a2Text.classList.add('fade-out');
+      setTimeout(() => {
+        a2Text.innerHTML = originalHTML;
+        a2Text.classList.remove('fade-out');
+      }, 500);
+    }, 3600);
+  };
+  document.addEventListener('click', (e) => {
+    if (!e.target.closest('a') && !e.target.closest('#hamburger')) {
+      showScrollMessage();
+    }
+  });
+
+  const hamburger = document.getElementById('hamburger');
+  const popupMenu = document.getElementById('popupMenu');
+  const footerCapsule = document.querySelector('.footer-capsule');
+  let popupTimeout;
+
+  function showPopupMenu() {
+    popupMenu.style.opacity = '0';
+    popupMenu.style.pointerEvents = 'none';
+    popupMenu.classList.add('show');
+
+    const capsuleRect = footerCapsule.getBoundingClientRect();
+    const menuRect = popupMenu.getBoundingClientRect();
+
+    popupMenu.style.left = (capsuleRect.right - menuRect.width) + 'px';
+    popupMenu.style.top = (capsuleRect.top - menuRect.height - 15) + 'px';
+
+    requestAnimationFrame(() => {
+      popupMenu.style.opacity = '1';
+      popupMenu.style.transform = 'translateY(0)';
+      popupMenu.style.pointerEvents = 'auto';
+    });
+
+    if (popupTimeout) clearTimeout(popupTimeout);
+    popupTimeout = setTimeout(hidePopupMenu, 5000);
+  }
+
+  function hidePopupMenu() {
+    popupMenu.style.opacity = '0';
+    popupMenu.style.transform = 'translateY(20px)';
+    popupMenu.style.pointerEvents = 'none';
+    setTimeout(() => popupMenu.classList.remove('show'), 400);
+  }
+
+  hamburger.addEventListener('click', (e) => {
+    e.stopPropagation();
+    if (popupMenu.classList.contains('show')) {
+      hidePopupMenu();
+    } else {
+      showPopupMenu();
+    }
+  });
+
+  document.addEventListener('click', (e) => {
+    if (!e.target.closest('#popupMenu') && !e.target.closest('#hamburger')) {
+      hidePopupMenu();
+    }
+  });
+  
+  document.querySelectorAll("a[href]").forEach(link => {
+    link.addEventListener("click", function (e) {
+      e.preventDefault();
+      const url = this.href;
+      document.body.classList.add("fade-out");
+      setTimeout(() => {
+        window.location.href = url;
+      }, 260);
+    });
+  });
+
+  const highlights = document.querySelectorAll('.highlight');
+ 
+  const tooltipTriggers = document.querySelectorAll('.tooltip-trigger');
+  const tooltip = document.getElementById('tooltip');
+  let hideTimeout;
+  let currentEl = null;
+
+  function showTooltip(el) {
+    clearTimeout(hideTimeout);
+
+    if (currentEl && currentEl !== el) {
+      tooltip.classList.remove('show');
+      tooltip.classList.add('hide');
+      setTimeout(() => {
+        updateTooltip(el);
+      }, 100);
+    } else {
+      updateTooltip(el);
+    }
+  }
+
+  function updateTooltip(el) {
+    tooltip.innerHTML  = el.dataset.tooltip;
+
+    const rect = el.getBoundingClientRect();
+    let left = rect.left + window.scrollX;
+    let top = rect.bottom + window.scrollY + 5;
+    tooltip.style.top = top + 'px';
+    tooltip.style.left = left + 'px';
+
+    tooltip.classList.remove('hide');
+    tooltip.classList.add('show');
+    tooltip.style.display = 'block';
+
+    const tooltipRect = tooltip.getBoundingClientRect();
+    const overflowX = tooltipRect.right - window.innerWidth;
+    if (overflowX > 0) tooltip.style.left = (left - overflowX - 5) + 'px';
+
+    hideTimeout = setTimeout(hideTooltip, 3000);
+    currentEl = el;
+  }
+
+  function hideTooltip() {
+    tooltip.classList.remove('show');
+    tooltip.classList.add('hide');
+    setTimeout(() => tooltip.style.display = 'none', 300);
+    currentEl = null;
+  }
+
+  // 鼠标悬停或点击触发 tooltip
+  tooltipTriggers.forEach(el => {
+    el.addEventListener('mouseenter', () => showTooltip(el));
+    el.addEventListener('click', () => showTooltip(el));
+  });
+
+  // 点击页面空白隐藏 tooltip
+  document.addEventListener('click', (e) => {
+    if (![...tooltipTriggers].some(el => el.contains(e.target))) {
+      hideTooltip();
+    }
+  });
+  
+  function bindTooltipBannerEvents() {
+  const tooltipBanners = tooltip.querySelectorAll(".banner");
+  tooltipBanners.forEach(el => {
+    const text = el.textContent.trim();
+    if (fontMap[text]) {
+      const item = fontMap[text];
+
+      el.addEventListener("mouseenter", () => {
+        el.style.fontFamily = item.font;
+        el.style.fontSize = `calc(${defaultFontSize} * ${item.scale})`;
+      });
+
+      el.addEventListener("mouseleave", () => {
+        el.style.fontFamily = "";
+        el.style.fontSize = defaultFontSize;
+      });
+    }
+  });
+}
 
 
-</main></div>
-</body></html>
+
+</script>
+
+</body>
+</html>

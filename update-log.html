@@ -1,0 +1,990 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>更新日志 Update Log | ShinyAkira's Website</title>
+  <meta name="description" content="Just a simple update log for the website of ShinyAkira, a caustic and whimsical observer and discussant.">
+    
+  <meta name="format-detection" content="telephone=no"> 
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta http-equiv="Imagetoolbar" content="no">
+  <meta http-equiv="Content-Language" content="en">
+  <meta http-equiv="x-dns-prefetch-control" content="on">
+
+  <!-- icon -->
+  <link rel="alternate icon" type="image/png" href="https://shinyakira106.github.io/Meterials/smallicon.png">
+
+  <!-- OGP -->
+  <meta property="og:url" content="https://shinyakira106.github.io/update-log.html">
+  <meta property="og:title" content="更新日志 Update Log | ShinyAkira's Website">
+  <meta property="og:image" content="https://shinyakira106.github.io/Meterials/ogp.png">
+  <meta property="og:image:type" content="image/jpeg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:description" content="Just a simple update log for the website of ShinyAkira, a caustic and whimsical observer and discussant.">
+  <meta property="og:site_name" content="更新日志 Update Log | ShinyAkira's Website">
+  <meta property="og:type" content="website">
+
+  <!-- Twitter Cards -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="更新日志 Update Log | ShinyAkira's Website">
+  <meta name="twitter:description" content="Just a simple update log for the website of ShinyAkira, a caustic and whimsical observer and discussant.">
+  <meta name="twitter:image:src" content="https://shinyakira106.github.io/Meterials/ogp.png">
+  <meta name="twitter:domain" content="https://shinyakira106.github.io/update-log.html">
+  <style>
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    font-family: "Montserrat";
+    background-color: #e8e8e8;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    display: block;  
+    height: auto;
+    color: var(--text);
+    overflow-y: auto;
+    opacity: 1;
+    transition: opacity 0.5s ease;
+    background: 
+      url('https://shinyakira106.github.io/Meterials/Logo.png') right bottom / 45vw no-repeat,
+      #e8e8e8;
+  }
+  body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background: inherit;
+    filter: blur(18px) brightness(1.05);
+    transform: scale(1.1);
+    z-index: 0;
+  }
+  body.fade-out {
+    opacity: 0;
+  }
+  
+html, body {
+  overflow-y: scroll;
+}
+::-webkit-scrollbar {
+  display: none;
+}
+html {
+  scrollbar-width: none;
+}
+body {
+  -ms-overflow-style: none;
+}
+
+.page {
+  max-width:900px;
+  margin:auto;
+  padding:40px 20px;
+  position:relative;
+}
+.header {
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  flex-wrap:wrap;
+  margin-bottom:40px;
+}
+.title {font-size:28px; font-weight:700;}
+.subtitle {color:#5c6570; font-size:14px;}
+
+  p.half-line { 
+    height: 0.5em; 
+    margin: 0; 
+  }
+
+  .name:hover {
+    color: rgb(237, 151, 36);
+    font-weight: bold;
+  }
+  .describe1:hover {
+    font-family: '3270-Regular';
+    font-weight: 900;
+    font-size: 1.2em;
+  }
+  .describe2:hover {
+    font-family: 'BradleyHandBold';
+    font-size: 1.1em;
+  }
+  .describe3{
+    font-size: 0.86em;
+  }
+
+  .banner {
+    position: relative;
+    display: inline-block;
+    color: #000;
+    text-decoration: none;
+    padding-bottom: 2px;
+  }
+  .banner:hover { 
+    color: #000000; 
+  }
+  .banner::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 3px;
+    background-color: #262626;
+    transform: scale(0,1);
+    transform-origin: left;
+    transition: 0.3s;
+  }
+  .banner:hover::after { 
+    transform: scaleX(1); 
+  }
+
+  .timeline {
+    position: relative;
+    margin-top: calc(4vmin + 2vmax);
+    padding-bottom: var(--capsule-gap, calc(10vmin + 5vmax));
+  }
+  .timeline::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 0;
+    transform: translateX(-50%);
+    width: 3px;
+    height: calc(100% - var(--capsule-gap, calc(10vmin + 5vmax)));
+    background: linear-gradient(180deg,#6a5031,#b4aca3);
+  }
+  .year-label {
+    font-size: 1.8rem;
+    position:relative;
+    text-align:center;
+    margin:40px 0 20px;
+  }
+  .year-label span {
+    display:inline-block;
+    background: rgba(255, 255, 255, 0.36);
+    backdrop-filter: blur(18px) saturate(180%);
+    -webkit-backdrop-filter: blur(18px) saturate(180%);
+    border-radius:20px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    box-shadow:0 8px 24px rgba(0,0,0,0.12), inset 0 1px 0 rgba(255,255,255,0.25);
+    font-weight:600;
+    padding:6px 16px;
+  }
+  .event {
+    position:relative;
+    width:50%;
+    padding:20px;
+    box-sizing:border-box;
+  }
+  .event.left {
+    left: 0;
+    text-align: left;
+    display: flex;
+    justify-content: flex-end;
+  }
+  .event.right {
+    left:50%; 
+    text-align:left;
+  }
+  .event .card {
+    display: inline-block;
+    padding: 16px;
+    border-radius: 16px;
+    background: rgba(255, 255, 255, 0.36);
+    backdrop-filter: blur(18px) saturate(180%);
+    -webkit-backdrop-filter: blur(18px) saturate(180%);
+    box-shadow: 0 8px 24px rgba(0,0,0,0.12),
+                inset 0 1px 0 rgba(255,255,255,0.25);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    color: #000;
+    font-family: 'Montserrat';
+    max-width: 400px;
+    position: relative;
+    transition: transform 0.2s ease, box-shadow 0.3s ease;
+    line-height: 1.6;
+  }
+  .event .card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 12px 32px rgba(0,0,0,0.18),
+                inset 0 1px 0 rgba(255,255,255,0.3);
+  }
+  .event::before {
+    content:"";
+    position:absolute;
+    top:40px;
+    left:100%;
+    transform:translateX(-50%);
+    width:14px;
+    height:14px;
+    border-radius:50%;
+    background:#b4aca3;
+    border:3px solid #fff;
+    z-index:3;
+    transition:all 0.3s ease;
+  }
+  .event.right::before {left:0%; transform:translateX(-50%);}
+  .event:hover::before {background:#ed9724; border-color:#ffeaea;}
+  .event .card h3 {
+    margin:0 0 8px;
+    font-size:18px;
+    font-style: 'strong';
+  }
+  .event .card .date {font-size:12px; color:#999; margin-bottom:8px;}
+  .event .card p {margin:0;}
+  .event .card img {margin-top:8px; width:100%; border-radius:8px;}
+  
+  .event.center {
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    width: auto; /* 根据文字自适应 */
+    margin-top: 40px;
+  }
+
+  .timeline-footer {
+    display: flex;
+    justify-content: center;
+    margin-top: 40px; /* 底部间距 */
+  }
+
+  .timeline-footer .card {
+    background: rgba(255, 255, 255, 0.36);
+    backdrop-filter: blur(18px) saturate(180%);
+    -webkit-backdrop-filter: blur(18px) saturate(180%);
+    border-radius: 16px;
+    border: 1px solid rgba(255,255,255,0.3);
+    box-shadow: 0 8px 24px rgba(0,0,0,0.12), inset 0 1px 0 rgba(255,255,255,0.25);
+    padding: 16px 24px;
+    font-family: 'Montserrat';
+    font-size: 1rem;
+    text-align: center;
+    max-width: 400px;
+  }
+
+  p.half-line { 
+    height: 0.6em; 
+    margin: 0; 
+  }
+
+  .dynamic-box {
+    position: absolute;
+    bottom: calc(2vmin + 1vmax);
+    left: calc(6vmin + 1vmax);
+    right: calc(6vmin + 1vmax);
+    margin: 0 auto;
+    border-radius: calc(5vmin + 2.5vmax);
+    padding: calc(1vmin + 0.5vmax) calc(3vmin + 1.5vmax);
+    box-shadow: 0 8px 24px rgba(0,0,0,0.12), inset 0 1px 0 rgba(255,255,255,0.25);
+    backdrop-filter: blur(18px) saturate(180%);
+    background: rgba(180, 172, 163, 0.36);
+    border: 1px solid rgba(255,255,255,0.3);
+    font-size: calc(1vmin + 0.6vmax);
+    font-family: Futura;
+    z-index: 15;
+    transition: all 0.3s ease;
+  }
+
+  .footer-capsule {
+    position: fixed;
+    bottom: calc(2vmin + 1vmax);
+    left: calc(6vmin + 1vmax);
+    right: calc(6vmin + 1vmax);
+    margin: 0 auto;
+    background: rgba(180, 172, 163, 0.36); 
+    backdrop-filter: blur(18px) saturate(180%); /* 玻璃模糊 + 饱和度 */
+    border-radius: calc(5vmin + 2.5vmax);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: calc(1vmin + 0.5vmax) calc(3vmin + 1.5vmax);
+    box-shadow: 0 8px 24px rgba(0,0,0,0.12), inset 0 1px 0 rgba(255,255,255,0.25); /* 阴影 + 光泽 */
+    border: 1px solid rgba(255, 255, 255, 0.3); /* 半透明边框 */
+    font-size: calc(1vmin + 0.6vmax);
+    font-family: Futura;
+    z-index: 15;
+    transition: backdrop-filter 0.3s, box-shadow 0.3s; /* 平滑过渡 */
+  }
+
+  .footer-capsule:hover::before {
+    transform: rotate(25deg) translateX(100%);
+  }
+
+  .footer-text {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .footer-text span.full { display: inline; }
+  .footer-text span.short { display: none; }
+
+  @media (max-width: 1300px) {
+    .footer-text span.full { display: none; }
+    .footer-text span.short {
+      display: inline-block; 
+      text-align: left;
+    }
+    .menu { display: none; }
+    .hamburger { display: flex; }
+  }
+
+  .menu {
+    display: flex;
+    gap: 1.5vmin;
+  }
+  .menu a {
+    font-family: LaborUnion;
+    position: relative;
+    color: #000;
+    text-decoration: none;
+    font-size: max(1rem, calc(1vmin + 0.6vmax));
+  }
+  .menu a:hover { 
+    color: #000000; 
+  }
+  .menu a::after {
+    content:'';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width:100%;
+    height: 0.3vmin;
+    background-color:#000000;
+    transform:scale(0,1);
+    transform-origin:left;
+    transition: 0.3s;
+  }
+  .menu a:hover::after { 
+    transform: scaleX(1); 
+  }
+
+  .hamburger {
+    font-family: LaborUnion;
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 1.5vmin;
+  }
+  .hamburger a {
+    font-family: LaborUnion;
+    position: relative;
+    color: #000;
+    text-decoration: none;
+    font-size: max(1rem, calc(1vmin + 0.6vmax));
+  }
+  .hamburger a:hover { 
+    color: #000000; 
+  }
+  .hamburger a::after {
+    content:'';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width:100%;
+    height: 0.8vmin;
+    background-color:#000000;
+    transform:scale(0,1);
+    transform-origin:left;
+    transition: 0.3s;
+  }
+  .hamburger a:hover::after { 
+    transform: scaleX(1); 
+  }
+
+  .popup-menu {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+    padding: 1rem 1.2rem;
+    border-radius: 1rem;
+    backdrop-filter: blur(16px) saturate(180%);
+    -webkit-backdrop-filter: blur(16px) saturate(180%);
+    background: rgba(225, 221, 216, 0.35);
+    border: 1px solid rgba(225, 221, 216, 0.2);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+    font-family: Futura;
+    opacity: 0;
+    transform: translateY(20px);
+    pointer-events: none;
+    transition: opacity 0.4s ease, transform 0.4s ease;
+    z-index: 20;
+  }
+
+  .popup-menu.show {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+  }
+
+  .popup-menu a {
+    color: #000;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: color 0.3s;
+  }
+  .popup-menu a:hover {
+    color: #0008ff;
+  }
+
+  .highlight:hover {
+    color: rgb(255, 98, 0);
+  }
+
+
+
+  .tooltip {
+    position: absolute;
+    padding: 15px 20px;
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(18px) saturate(180%);
+    border-radius: 16px;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.12), inset 0 1px 0 rgba(255,255,255,0.25);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    color: #000;
+    display: none;
+    z-index: 100;
+    white-space: nowrap;
+    overflow: hidden;
+    font-size: calc(0.5vmin + 0.5vmax);
+    font-family: 'Futura';
+    transition: opacity 0.3s ease, transform 0.3s ease;
+  }
+  .tooltip.show {
+    display: block;
+    opacity: 1;
+    transform: translateY(0);
+  }
+  .tooltip.hide {
+    opacity: 0;
+    transform: translateY(-5px);
+  }
+    
+  /* Desktop Devices */
+  @media (min-width: 1600px) {
+    .hero {
+      font-size: max(1.6rem, calc(1.5vmin + 1vmax));
+    }
+    .footer-capsule {
+      font-size: max(1rem, calc(1vmin + 0.6vmax));
+    }
+    .menu a {
+      font-size: max(0.9rem, calc(0.6vmin + 0.7vmax));
+    }
+    .corner-logo-wrapper {
+      width: 360px;
+      height: 360px;
+    }
+  }
+
+  /* Mobile Devices */
+  @media (max-width: 480px) {
+    .hero {
+      font-size: min(1.2rem, calc(1.5vmin + 1vmax));
+      line-height: 1.25;
+    }
+    .footer-capsule {
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0.5rem 1rem;
+      gap: 0;
+    }
+    .footer-text { text-align: left; }
+    .menu { display: none; }
+    .hamburger { display: flex; }
+    .corner-logo-wrapper {
+      width: 180px;
+      height: 180px;
+      left: 2rem;
+      bottom: 2rem;
+    }
+  }
+
+
+  @font-face {
+    font-family: 'LaborUnion';
+    src: url('https://shinyakira106.github.io/Fonts/LaborUnion-Regular.ttf') format('truetype'); 
+  }
+  @font-face { 
+    font-family: 'Futura'; 
+    src: url('https://shinyakira106.github.io/Fonts/Futura-Medium.tff') format('truetype'); 
+  }
+  @font-face {
+    font-family: 'PlayfairDisplay-Italic';
+    src: url('https://shinyakira106.github.io/Fonts/PlayfairDisplay-Italic.ttf') format('truetype'); 
+  }
+  @font-face
+  {
+      font-family: "Montserrat";
+      font-style: normal;
+      font-weight: 400;
+      src: local(""),
+          url("https://shinyakira106.github.io/Fonts/montserrat-v23-latin-regular.woff2") format("woff2"), /* Chrome 26+, Opera 23+, Firefox 39+ */
+          url("https://shinyakira106.github.io/Fonts/montserrat-v23-latin-regular.woff") format("woff"); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+  }
+  @font-face
+  {
+      font-family: "Montserrat";
+      font-style: normal;
+      font-weight: 600;
+      src: local(""),
+          url("https://shinyakira106.github.io/Fonts/montserrat-v23-latin-600.woff2") format("woff2"), /* Chrome 26+, Opera 23+, Firefox 39+ */
+          url("https://shinyakira106.github.io/Fonts/montserrat-v23-latin-600.woff") format("woff"); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+  }
+  @font-face
+  {
+      font-family: "Montserrat";
+      font-style: italic;
+      font-weight: 400;
+      src: local(""),
+          url("https://shinyakira106.github.io/Fonts/montserrat-v23-latin-italic.woff2") format("woff2"), /* Chrome 26+, Opera 23+, Firefox 39+ */
+          url("https://shinyakira106.github.io/Fonts/montserrat-v23-latin-italic.woff") format("woff"); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+  }
+  @font-face
+  {
+      font-family: "Montserrat";
+      font-style: italic;
+      font-weight: 600;
+      src: local(""),
+          url("https://shinyakira106.github.io/Fonts/montserrat-v23-latin-600italic.woff2") format("woff2"), /* Chrome 26+, Opera 23+, Firefox 39+ */
+          url("https://shinyakira106.github.io/Fonts/montserrat-v23-latin-600italic.woff") format("woff"); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+  }
+
+  </style>
+</head>
+
+
+<body>
+
+<div class="page">
+<header class="header">
+  <div>
+    <div class="title">更新日志 · Update Log</div>
+    <div class="subtitle"></div>
+  </div>
+</header>
+
+<div class="timeline">
+
+
+<!-- 2025 年 -->
+<div class="year-label"><span>- 2025 -</span></div>
+
+<div class="event left">
+  <div class="card">
+    <h3>上线 Main Website 全新设计</h3>
+    <div class="date">2025-09-13</div>
+    <p><strong>建站以来最大的视觉革新。</strong>
+      <br>使用<strong>「Solid Glass」</strong>设计语言
+      <img src="https://shinyakira106.github.io/Meterials/UpdateLog/solid-glass.png" alt="Solid Glass">
+      <br>悬浮<strong>「Glass Capsule」</strong>灵动胶囊
+      <br>页面支持交互和响应式设计，兼容多终端设备
+      <img src="https://shinyakira106.github.io/Meterials/UpdateLog/glass-capsule.png" alt="Glass Capsule">
+    </p>
+    <div style="font-size:small; color:#5c6570">
+      <del><p class="half-line"></p>新设计真的咕咕了一年</del>（bushi
+      <br>咕咕太久于是就上了类 Liquid Glass 设计…
+    </div>
+    <img src="https://shinyakira106.github.io/Meterials/UpdateLog/newwebsite2025.png" alt="Brand New Design 2025">
+  </div>
+</div>
+
+
+<div class="event right">
+  <div class="card">
+    <h3>上线 Babble 全新设计</h3>
+    <div class="date">2025-09-13</div>
+    <p>首次调整 <strong>Babble</strong> 的设计
+      <br>协同 <strong>Main Website</strong> 视觉革新
+      <br>统一<strong>「Solid Glass」</strong>设计语言
+    </p>
+    <div style="font-size:small; color:#5c6570">
+      <p class="half-line"></p>之前设计是和 Babble 统一的
+        <br><del>现在和 Main Website 跑了</del>（bushi
+    </div>
+    <img src="https://shinyakira106.github.io/Meterials/UpdateLog/Babble-new-design2025.png" alt="Brand New Design 2025">
+  </div>
+</div>
+
+<div class="event left">
+  <div class="card">
+    <h3>上线「更新日志」和 404 提示页面 3.0</h3>
+    <div class="date">2025-09-13</div>
+    <p>协同 <strong>Main Website</strong> 视觉革新
+      <br>统一<strong>「Solid Glass」</strong>设计语言
+    </p>
+    <div style="font-size:small; color:#5c6570">
+      <p class="half-line"></p>之前 Update Log 是和 Babble 统一的
+        <br><del>现在却和 Main Website 跑了</del>（bushi
+        <br><del>都「玻璃」了那 404 也玻璃一下</del>（bushi
+    </div>
+    <img src="https://shinyakira106.github.io/Meterials/UpdateLog/update-log2025.png" alt="Brand New Design 2025">
+    <img src="https://shinyakira106.github.io/Meterials/UpdateLog/404-2025.png" alt="Brand New Design 2025">
+  </div>
+</div>
+
+<div class="event right">
+  <div class="card">
+    <h3>Babble 上线 Bubble 评论系统 1.0</h3>
+    <div class="date">2025-03-21</div>
+    <p>2 周年之际，想了个法子<br>终于有机会听听你们和我聊聊了
+    </p>
+    <img src="https://shinyakira106.github.io/Meterials/UpdateLog/babble-comment.png" alt="Brand New Design 2025">
+  </div>
+</div>
+
+<div class="event left">
+  <div class="card">
+    <h3>Babble 2 周年</h3>
+    <div class="date">2025-03-21</div>
+    <p><a class="banner" target="_blank" href="https://shinyakira106.github.io/babble/2024/1_year_anniversary/">居然能迎来两周年</a>。</p>
+    <img src="https://shinyakira106.github.io/Meterials/UpdateLog/0blank.png">
+  </div>
+</div>
+
+<!-- 2024 年 -->
+<div class="year-label"><span>- 2024 -</span></div>
+
+<div class="event right">
+  <div class="card">
+    <h3>Babble 上线特别文章页面</h3>
+    <div class="date">2024-06-19</div>
+    <p>此处保存着一场<br>有着明确「开始」和「结束」的文本冒险</p>
+    <img src="https://shinyakira106.github.io/Meterials/UpdateLog/20240620hide.png" alt="配图">
+  </div>
+</div>
+
+<div class="event left">
+  <div class="card">
+    <h3>Babble 1 周年</h3>
+    <div class="date">2024-03-21</div>
+    <p><a class="banner" target="_blank" href="https://shinyakira106.github.io/babble/2024/1_year_anniversary/">Happy Anniversary</a> !</p>
+    <img src="https://shinyakira106.github.io/Meterials/UpdateLog/0blank.png">
+  </div>
+</div>
+
+<div class="event right">
+  <div class="card">
+    <h3>上线 404 提示界面 2.0</h3>
+    <div class="date">2024-01-07</div>
+    <p>Robert Frost - <i><a class="banner" target="_blank" href="https://www.poetryfoundation.org/poems/44272/the-road-not-taken" class="link">The Road Not Taken (1915)</a></i></p>
+    <img src="https://shinyakira106.github.io/Meterials/UpdateLog/20240105neo404.png" alt="配图">
+  </div>
+</div>
+
+<div class="event left">
+  <div class="card">
+    <h3>Babble 上线适配性文章 Title</h3>
+    <div class="date">2024-01-03</div>
+    <p>4202 年才完成技(tuo)术(tuo)攻(la)关(la)</p>
+    <img src="https://shinyakira106.github.io/Meterials/UpdateLog/20240105title.png" alt="配图">
+  </div>
+</div>
+
+<div class="event right">
+  <div class="card">
+    <h3>上线浏览数据分析页面</h3>
+    <div class="date">2024-01-01</div>
+    <p>数据涵盖 Main Website 及 Babble
+    <div style="font-size:small; color:#5c6570">
+      <del><p class="half-line"></p>谁知道我为什么要在新年第一天搞这玩意</del>（bushi
+      <br><del>没啥用，我也几乎不看</del>（<del>毕竟 Babble 本身就没人看</del>）
+    </div>
+    <img src="https://shinyakira106.github.io/Meterials/UpdateLog/20240101.png" alt="配图">
+          <br>Powered by <strong>Google Analytics</strong></p>
+  </div>
+</div>
+
+<!-- 2023 年 -->
+<div class="year-label"><span>- 2023 -</span></div>
+
+<div class="event left">
+  <div class="card">
+    <h3>上线「更新日志」页面 2.0</h3>
+    <div class="date">2023-12-31</div>
+    <p>采用全新「时间轴」设计</p>支持显示交互和响应式设计，兼容多终端设备
+    <img src="https://shinyakira106.github.io/Meterials/UpdateLog/20231231.png" alt="配图">
+    <div style="font-size:0.76rem; color:#000000">
+      Special Thanks to <a class="banner" target="_blank" href="https://anyway.fm/">Anyway.FM</a> & JJ Ying</strong>
+    </div>
+  </div>
+</div>
+
+<div class="event right">
+  <div class="card">
+    <h3>Babble 上线「小标识」</h3>
+    <div class="date">2023-12-23</div>
+    <p>只是因为想写的越来越多了（bushi
+      <br>「系列」、「更新」和「追评」有明确标识了</p>
+    <img src="https://shinyakira106.github.io/Meterials/UpdateLog/20231223.png" alt="配图">
+  </div>
+</div>
+
+<div class="event left">
+  <div class="card">
+    <h3>Babble 上线「跳转目录」1.0</h3>
+    <div class="date">2023-06-08</div>
+    <p>最初只是为了锐评《<a class="banner" target="_blank" href="https://shinyakira106.github.io/babble/2023/focuson_oshi_no_ko/">推しの子</a>》</p>
+    <img src="https://shinyakira106.github.io/Meterials/UpdateLog/20230608.png" alt="配图">
+  </div>
+</div>
+
+<div class="event right">
+  <div class="card">
+    <h3>上线「更新日志」页面 1.0</h3>
+    <div class="date">2023-06-06</div>
+    <p><del>因为这段时间做了不少工作</del>（bushi）</p>
+    <img src="https://shinyakira106.github.io/Meterials/UpdateLog/original_updatelog.png" alt="配图">
+  </div>
+</div>
+
+<div class="event left">
+  <div class="card">
+    <h3>上线 404 提示界面 1.0</h3>
+    <div class="date">2023-03-28</div>
+    <p><del>打油诗只有 0 次或无数次</del>（bushi</p>
+    <img src="https://shinyakira106.github.io/Meterials/UpdateLog/404.png" alt="配图">
+  </div>
+</div>
+
+<div class="event right">
+  <div class="card">
+    <h3>Babble 支持嵌入图片和插件</h3>
+    <div class="date">2023-03-25</div>
+    <p>标题和摘要支持换行也在同一天</p>
+    <div style="font-size:0.86rem; color:#4d545d">
+      <del>Tremendous Update</del>（bushi</p>
+    </div>
+
+    <img src="https://shinyakira106.github.io/Meterials/UpdateLog/20230325.png" alt="配图">
+  </div>
+</div>
+
+<div class="event left">
+  <div class="card">
+    <h3><a class="banner" target="_blank" href="https://shinyakira106.github.io/babble">ShinyAkira’s Babble</a> 堂堂建站</h3>
+    <div class="date">2023-03-21</div>
+    <p>「最初的唠叨」。</p>
+    <img src="https://shinyakira106.github.io/Meterials/UpdateLog/first-babble.png" alt="配图">
+  </div>
+</div>
+
+<div class="event right">
+  <div class="card">
+    <h3><a class="banner" target="_blank" href="https://shinyakira106.github.io/">ShinyAkira’s Website</a> 堂堂建站</h3>
+    <div class="date">2023-03-14</div>
+    <p>「一切的起点」。</p>
+    <img src="https://shinyakira106.github.io/Meterials/UpdateLog/self-website.png" alt="配图">
+  </div>
+</div>
+
+<div >
+
+
+
+
+
+
+
+
+  <div class="timeline-footer">
+    <div class="card">
+      <strong>我仍旧在深夜期盼着美好的降临</strong><br>
+      <span style="font-family:'PlayfairDisplay-Italic';font-style:'strong';">
+        <!--Just Wait Gentle into That Deep Night-->
+      </span>
+    </div>
+  </div>
+</div>
+</div>
+
+<footer class="footer-capsule">
+  <div class="footer-text">
+    <span class="full">©️ShinyAkira 2025. All rights reserved.</span>
+    <span class="short">©️ShinyAkira 2025</span>
+  </div>
+
+  <nav class="menu">
+    <a href="https://shinyakira106.github.io/">Introduction</a>
+    <a href="#portfolio">Portfolio</a>
+    <a href="https://shinyakira106.github.io/babble/">Babble</a>
+  </nav>
+
+  <div class="hamburger" id="hamburger">
+    <a>Menu</a>
+  </div>
+</footer>
+
+<div class="popup-menu" id="popupMenu">
+    <a href="https://shinyakira106.github.io/">Introduction</a>
+    <a href="#portfolio">Portfolio</a>
+    <a href="https://shinyakira106.github.io/babble/">Babble</a>
+</div>
+
+<div class="tooltip" id="tooltip"></div>
+
+<script>
+  const hamburger = document.getElementById('hamburger');
+  const popupMenu = document.getElementById('popupMenu');
+  const footerCapsule = document.querySelector('.footer-capsule');
+  let popupTimeout;
+
+  function showPopupMenu() {
+    popupMenu.style.opacity = '0';
+    popupMenu.style.pointerEvents = 'none';
+    popupMenu.classList.add('show');
+
+    const capsuleRect = footerCapsule.getBoundingClientRect();
+    const menuRect = popupMenu.getBoundingClientRect();
+
+    popupMenu.style.left = (capsuleRect.right - menuRect.width) + 'px';
+    popupMenu.style.top = (capsuleRect.top - menuRect.height - 15) + 'px';
+
+    requestAnimationFrame(() => {
+      popupMenu.style.opacity = '1';
+      popupMenu.style.transform = 'translateY(0)';
+      popupMenu.style.pointerEvents = 'auto';
+    });
+
+    if (popupTimeout) clearTimeout(popupTimeout);
+    popupTimeout = setTimeout(hidePopupMenu, 5000);
+  }
+
+  function hidePopupMenu() {
+    popupMenu.style.opacity = '0';
+    popupMenu.style.transform = 'translateY(20px)';
+    popupMenu.style.pointerEvents = 'none';
+    setTimeout(() => popupMenu.classList.remove('show'), 400);
+  }
+
+  hamburger.addEventListener('click', (e) => {
+    e.stopPropagation();
+    if (popupMenu.classList.contains('show')) {
+      hidePopupMenu();
+    } else {
+      showPopupMenu();
+    }
+  });
+
+  document.addEventListener('click', (e) => {
+    if (!e.target.closest('#popupMenu') && !e.target.closest('#hamburger')) {
+      hidePopupMenu();
+    }
+  });
+  
+  document.querySelectorAll("a[href]").forEach(link => {
+    link.addEventListener("click", function (e) {
+      e.preventDefault();
+      const url = this.href;
+      document.body.classList.add("fade-out");
+      setTimeout(() => {
+        window.location.href = url;
+      }, 260);
+    });
+  });
+
+  const highlights = document.querySelectorAll('.highlight');
+ 
+  const tooltipTriggers = document.querySelectorAll('.tooltip-trigger');
+  const tooltip = document.getElementById('tooltip');
+  let hideTimeout;
+  let currentEl = null;
+
+  function showTooltip(el) {
+    clearTimeout(hideTimeout);
+
+    if (currentEl && currentEl !== el) {
+      tooltip.classList.remove('show');
+      tooltip.classList.add('hide');
+      setTimeout(() => {
+        updateTooltip(el);
+      }, 100);
+    } else {
+      updateTooltip(el);
+    }
+  }
+
+  function updateTooltip(el) {
+    tooltip.innerHTML  = el.dataset.tooltip;
+
+    const rect = el.getBoundingClientRect();
+    let left = rect.left + window.scrollX;
+    let top = rect.bottom + window.scrollY + 5;
+    tooltip.style.top = top + 'px';
+    tooltip.style.left = left + 'px';
+
+    tooltip.classList.remove('hide');
+    tooltip.classList.add('show');
+    tooltip.style.display = 'block';
+
+    const tooltipRect = tooltip.getBoundingClientRect();
+    const overflowX = tooltipRect.right - window.innerWidth;
+    if (overflowX > 0) tooltip.style.left = (left - overflowX - 5) + 'px';
+
+    hideTimeout = setTimeout(hideTooltip, 3000);
+    currentEl = el;
+  }
+
+  function hideTooltip() {
+    tooltip.classList.remove('show');
+    tooltip.classList.add('hide');
+    setTimeout(() => tooltip.style.display = 'none', 300);
+    currentEl = null;
+  }
+  tooltipTriggers.forEach(el => {
+    el.addEventListener('mouseenter', () => showTooltip(el));
+    el.addEventListener('click', () => showTooltip(el));
+  });
+  document.addEventListener('click', (e) => {
+    if (![...tooltipTriggers].some(el => el.contains(e.target))) {
+      hideTooltip();
+    }
+  });
+  function bindTooltipBannerEvents() {
+  const tooltipBanners = tooltip.querySelectorAll(".banner");
+  tooltipBanners.forEach(el => {
+    const text = el.textContent.trim();
+    if (fontMap[text]) {
+      const item = fontMap[text];
+
+      el.addEventListener("mouseenter", () => {
+        el.style.fontFamily = item.font;
+        el.style.fontSize = `calc(${defaultFontSize} * ${item.scale})`;
+      });
+
+      el.addEventListener("mouseleave", () => {
+        el.style.fontFamily = "";
+        el.style.fontSize = defaultFontSize;
+      });
+    }
+  });
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+  const capsule = document.querySelector(".footer-capsule");
+  const timeline = document.querySelector(".timeline");
+
+  if (capsule && timeline) {
+    const updateTimelinePadding = () => {
+      const capsuleHeight = capsule.getBoundingClientRect().height + 40;
+      timeline.style.setProperty("--capsule-gap", capsuleHeight + "px");
+    };
+
+    updateTimelinePadding();
+    window.addEventListener("resize", updateTimelinePadding);
+    if (document.fonts) { document.fonts.ready.then(updateTimelinePadding); }
+  }
+});
+
+
+</script>
+
+</body>
+</html>
