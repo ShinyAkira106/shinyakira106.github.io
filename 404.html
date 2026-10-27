@@ -417,6 +417,19 @@
     @media (prefers-reduced-motion: reduce) {
       .chevrons svg { animation: none; opacity: 1; }
     }
+    /* Exit wipe: dark red sweeps in from the right, then we go home */
+    .wipe { position: fixed; inset: 0; z-index: 100; pointer-events: none; }
+    .wipe i {
+      position: absolute; inset: 0;
+      transform: scaleX(0);
+      transform-origin: right center;
+    }
+    .wipe i:nth-child(1) { background: #8a1a1f; }
+    .wipe i:nth-child(2) { background: #5c0f13; }
+    .wipe.go { pointer-events: all; }
+    .wipe.go i { animation: wipe-in 0.55s cubic-bezier(0.76, 0, 0.24, 1) forwards; }
+    .wipe.go i:nth-child(2) { animation-delay: 0.09s; }
+    @keyframes wipe-in { to { transform: scaleX(1); } }
   </style>
 </head>
 <body>
@@ -480,5 +493,22 @@
 
     <footer>&copy; ShinyAkira 2026</footer>
   </div>
+  <div class="wipe" aria-hidden="true"><i></i><i></i></div>
+  <script>
+    (function () {
+      var wipe = document.querySelector(".wipe");
+      var still = window.matchMedia && matchMedia("(prefers-reduced-motion: reduce)").matches;
+      document.querySelectorAll('a[href="/"]').forEach(function (a) {
+        a.addEventListener("click", function (e) {
+          if (still || e.metaKey || e.ctrlKey || e.shiftKey || e.altKey || e.button !== 0) return;
+          e.preventDefault();
+          try { sessionStorage.setItem("wipe", "1"); } catch (err) {}
+          wipe.classList.add("go");
+          setTimeout(function () { location.href = a.href; }, 700);
+        });
+      });
+      window.addEventListener("pageshow", function (e) { if (e.persisted) wipe.classList.remove("go"); });
+    })();
+  </script>
 </body>
 </html>
