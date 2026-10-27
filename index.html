@@ -2,6 +2,34 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
+  <script>
+    try {
+      if (sessionStorage.getItem("wipe")) {
+        sessionStorage.removeItem("wipe");
+        if (!(window.matchMedia && matchMedia("(prefers-reduced-motion: reduce)").matches)) {
+          document.documentElement.classList.add("wipe-out");
+          document.documentElement.style.background = "#5c0f13";
+        }
+      }
+    } catch (err) {}
+  </script>
+  <style>
+    /* Arrival wipe from the 404 page: the dark red cover keeps travelling left and clears */
+    html.wipe-out::before, html.wipe-out::after {
+      content: "";
+      position: fixed; inset: 0;
+      z-index: 100;
+      pointer-events: none;
+      transform-origin: left center;
+      animation: wipe-out 0.6s cubic-bezier(0.76, 0, 0.24, 1) 0.1s forwards;
+    }
+    html.wipe-out::before { background: #8a1a1f; animation-delay: 0.19s; }
+    html.wipe-out::after { background: #5c0f13; }
+    @keyframes wipe-out { to { transform: scaleX(0); } }
+    @view-transition { navigation: auto; }
+    ::view-transition-old(root),
+    ::view-transition-new(root) { animation: none; }
+  </style>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>ShinyAkira's Website</title>
   <meta name="description" content="Just a simple introduction of ShinyAkira, a caustic and whimsical observer and discussant.">
@@ -357,30 +385,6 @@
     @media (max-height: 720px) {
       .barcode, .label .glyph { display: none; }
     }
-  </style>
-  <script>
-    try {
-      if (sessionStorage.getItem("wipe")) {
-        sessionStorage.removeItem("wipe");
-        if (!(window.matchMedia && matchMedia("(prefers-reduced-motion: reduce)").matches)) {
-          document.documentElement.classList.add("wipe-out");
-        }
-      }
-    } catch (err) {}
-  </script>
-  <style>
-    /* Arrival wipe from the 404 page: the dark red cover keeps travelling left and clears */
-    html.wipe-out::before, html.wipe-out::after {
-      content: "";
-      position: fixed; inset: 0;
-      z-index: 100;
-      pointer-events: none;
-      transform-origin: left center;
-      animation: wipe-out 0.6s cubic-bezier(0.76, 0, 0.24, 1) 0.1s forwards;
-    }
-    html.wipe-out::before { background: #8a1a1f; animation-delay: 0.19s; }
-    html.wipe-out::after { background: #5c0f13; }
-    @keyframes wipe-out { to { transform: scaleX(0); } }
   </style>
 </head>
 <body>

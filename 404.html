@@ -430,6 +430,9 @@
     .wipe.go i { animation: wipe-in 0.55s cubic-bezier(0.76, 0, 0.24, 1) forwards; }
     .wipe.go i:nth-child(2) { animation-delay: 0.09s; }
     @keyframes wipe-in { to { transform: scaleX(1); } }
+    @view-transition { navigation: auto; }
+    ::view-transition-old(root),
+    ::view-transition-new(root) { animation: none; }
   </style>
 </head>
 <body>
